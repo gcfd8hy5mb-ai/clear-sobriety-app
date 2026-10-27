@@ -37,8 +37,8 @@ async function enroll(){
   const {publicKey}=await (await fetch(SERVER_URL+'/public-key',{cache:'no-store'})).json();
   const reg=await navigator.serviceWorker.ready;
   const sub=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:vapidBytes(publicKey)});
-  let token=sessionStorage.getItem(ID);
-  if(!token){token=hex(crypto.getRandomValues(new Uint8Array(32)));sessionStorage.setItem(ID,token)}
+  let token=localStorage.getItem(ID);
+  if(!token){token=hex(crypto.getRandomValues(new Uint8Array(32)));localStorage.setItem(ID,token)}
   const state=getState();
   const response=await send('/device',token,{subscription:sub.toJSON(),windows:available,timezone:Intl.DateTimeFormat().resolvedOptions().timeZone,leadMinutes:Math.min(120,Math.max(0,Number(state.lead)||30))});
   status(response.scheduled?'Background reminders enabled.':'Subscription registered, but background scheduling is not active yet.');
@@ -47,10 +47,10 @@ async function enroll(){
 async function disconnect(){
  if(!confirm('Disconnect this device from future background reminders?'))return;
  try{
-  const token=sessionStorage.getItem(ID);
+  const token=localStorage.getItem(ID);
   if(SERVER_URL&&token)await send('/device',token,null,'DELETE');
   if('serviceWorker'in navigator){const reg=await navigator.serviceWorker.ready;const sub=await reg.pushManager.getSubscription();if(sub)await sub.unsubscribe()}
-  sessionStorage.removeItem(ID);
+  localStorage.removeItem(ID);
   status('Local push subscription disconnected.' );
  }catch(e){status('Could not confirm server removal: '+String(e.message||e))}
 }
