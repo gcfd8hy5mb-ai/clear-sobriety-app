@@ -30,7 +30,7 @@ export function nextOccurrence({weekday,hour,minute=0},timezone,from=Date.now(),
 export function dueWindows(windows,timezone,now=Date.now(),leadMinutes=30,graceMinutes=2){
  return windows.flatMap(w=>{
   // Search from just before now so an alert isn't lost because the periodic job started seconds late.
-  const hit=nextOccurrence(w,timezone,now-(graceMinutes+1)*msMinute,leadMinutes);
+  const hit=nextOccurrence(w,timezone,now-(leadMinutes+graceMinutes+1)*msMinute,leadMinutes);
   return hit&&hit.sendAt<=now&&now-hit.sendAt<=graceMinutes*msMinute?[hit]:[];
  });
 }
