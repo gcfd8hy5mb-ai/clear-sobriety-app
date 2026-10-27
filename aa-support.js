@@ -1,0 +1,16 @@
+(()=>{'use strict';
+const KEY='clear-aa-support-v1';
+const $=id=>document.getElementById(id);
+function read(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch{return {}}}
+function write(v){localStorage.setItem(KEY,JSON.stringify(v))}
+function init(){
+ const section=document.createElement('section');section.className='card';section.id='aaSupport';
+ section.innerHTML='<p class="eyebrow">Community support</p><h2>A.A. & recovery</h2><p class="muted small">Find people to talk to, explore meetings, and track your own progress. Optional and private.</p><div style="display:grid;gap:9px"><a class="btn secondary" style="display:block;text-align:center;text-decoration:none" target="_blank" rel="noopener noreferrer" href="https://www.aa.org/find-aa">Find in-person A.A. meetings</a><a class="btn secondary" style="display:block;text-align:center;text-decoration:none" target="_blank" rel="noopener noreferrer" href="https://aa-intergroup.org/meetings/">Find online A.A. meetings</a><a class="btn secondary" style="display:block;text-align:center;text-decoration:none" target="_blank" rel="noopener noreferrer" href="https://www.aa.org/meeting-guide-app">A.A. Meeting Guide</a><a class="btn secondary" style="display:block;text-align:center;text-decoration:none" target="_blank" rel="noopener noreferrer" href="https://www.aa.org/everything-aa-app">A.A. reading & daily reflections</a></div><p class="small muted" style="margin-top:15px">Meetings attended (saved only on this phone)</p><div class="row"><strong id="aaCount">0 meetings</strong><button id="aaAdd" type="button" class="btn secondary tiny">Log a meeting</button></div><p class="small muted" id="aaLatest"></p><label class="small" for="aaContact">Trusted support contact (optional)</label><input id="aaContact" type="tel" autocomplete="off" placeholder="Phone number" style="width:100%;margin:8px 0 10px;padding:12px;border-radius:12px;background:#092024;color:#fff;border:1px solid #31565a"><div class="row"><button id="aaSave" type="button" class="btn secondary tiny">Save contact</button><a id="aaCall" class="btn secondary tiny" style="text-decoration:none;text-align:center" href="#" hidden>Call contact</a></div><p class="small muted">CLEAR is independent and is not affiliated with or endorsed by Alcoholics Anonymous. External links open official A.A. resources. No meeting attendance is verified or shared.</p>';
+ const target=$('support')||$('settings')||document.querySelector('.app');if(!target)return;target.append(section);
+ function draw(){const s=read();$('aaCount').textContent=(s.meetings||[]).length+' meetings';$('aaLatest').textContent=s.meetings?.length?'Last logged: '+new Date(s.meetings[s.meetings.length-1]).toLocaleDateString():'';$('aaContact').value=s.contact||'';if(s.contact){$('aaCall').hidden=false;$('aaCall').href='tel:'+s.contact.replace(/[^+\d]/g,'')}else{$('aaCall').hidden=true;$('aaCall').removeAttribute('href')}}
+ $('aaAdd').onclick=()=>{const s=read();s.meetings=[...(s.meetings||[]),new Date().toISOString()];write(s);draw()};
+ $('aaSave').onclick=()=>{const s=read();s.contact=$('aaContact').value.trim().slice(0,40);write(s);draw()};
+ draw();
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
