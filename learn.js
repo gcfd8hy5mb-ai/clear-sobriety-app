@@ -1,0 +1,23 @@
+/* CLEAR adaptive support v0.2 — on-device only, no background push */
+(()=>{'use strict';
+const KEY='clear-v1',PREF='clear-support-v2';let prefs={enabled:false,lastKey:'',maxPerDay:1,seenDate:''};
+try{prefs={...prefs,...JSON.parse(localStorage.getItem(PREF)||'{}')}}catch{}
+const $=id=>document.getElementById(id);
+function state(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch{return {}}}
+function store(){localStorage.setItem(PREF,JSON.stringify(prefs))}
+function patterns(){const e=(state().entries||[]).filter(x=>Number(x.intensity)>=2).filter(x=>Date.now()-Date.parse(x.time)<90*86400000);
+const bins=new Map();for(const x of e){const d=new Date(x.time);if(!Number.isFinite(d.getTime()))continue;const key=d.getDay()+'-'+d.getHours();const b=bins.get(key)||{day:d.getDay(),hour:d.getHours(),n:0,score:0,dates:new Set()};b.n++;b.score+=Number(x.intensity);b.dates.add(d.toDateString());bins.set(key,b)}
+return [...bins.values()].filter(b=>b.dates.size>=2).sort((a,b)=>b.score-a.score).slice(0,3)}
+const clock=h=>((h+11)%12+1)+(h<12?' AM':' PM');
+function nextPattern(){const list=patterns(),now=new Date();let options=[];for(const b of list){const d=new Date(now);d.setHours(b.hour,0,0,0);d.setDate(d.getDate()+(b.day-d.getDay()+7)%7);if(d.getTime()<Date.now()-60000)d.setDate(d.getDate()+7);options.push({...b,date:d})}return options.sort((a,b)=>a.date-b.date)[0]}
+function display(){const p=nextPattern();const status=$('adaptiveStatus');if(!status)return;status.textContent=p?'Possible higher-craving period: '+['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][p.day]+' around '+clock(p.hour)+'. Based on '+p.dates.size+' separate days of check-ins.':'Still learning. Two or more different days with reported cravings in the same weekday/hour are needed to suggest a window.';$('adaptiveToggle').checked=prefs.enabled;$('adaptivePermission').textContent=('Notification' in window)?'Browser permission: '+Notification.permission:'This browser does not support web notifications.';}
+function create(){const card=document.createElement('div');card.className='card';card.innerHTML='<div class="eyebrow">Adaptive support · Early version</div><h2>Learning your routine</h2><p class="muted small" id="adaptiveStatus"></p><p class="footer-note">CLEAR only knows about cravings you report. These tentative patterns are not validated predictions. Notification checks currently run while the app is open, not reliably in the background.</p>';const insights=$('insights');insights.insertBefore(card,insights.children[3]||null);
+const s=document.createElement('div');s.className='card';s.innerHTML='<h2>Notification trial</h2><label class="inline"><input type="checkbox" id="adaptiveToggle"> Check for learned craving windows while CLEAR is open</label><button class="btn secondary" id="enableNotifications" type="button">Allow notifications</button><p class="footer-note" id="adaptivePermission"></p><p class="footer-note">For true background alerts on iPhone, install to Home Screen and enable an actual push service in a future release. This version does not send background notifications.</p>';$('settings').append(s);
+$('adaptiveToggle').onchange=e=>{prefs.enabled=e.target.checked;store();display()};
+$('enableNotifications').onclick=async()=>{if(!('Notification' in window)){alert('Notifications are not supported in this browser.');return}try{await Notification.requestPermission()}catch{}display()};
+document.querySelectorAll('#saveCheck,#finishCraving,[data-tab]').forEach(b=>b.addEventListener('click',()=>setTimeout(display,50)));display()}
+function tick(){if(!prefs.enabled||!('Notification' in window)||Notification.permission!=='granted'||!document.visibilityState||document.visibilityState!=='visible')return;const p=nextPattern();if(!p)return;const s=state(),lead=Number(s.lead)||30;const due=p.date.getTime()-lead*60000,now=Date.now();const day=new Date().toDateString();const key=p.day+'-'+p.hour+'-'+day;if(now>=due&&now<due+60000&&prefs.lastKey!==key&&prefs.seenDate!==day){prefs.lastKey=key;prefs.seenDate=day;store();new Notification('A little check-in',{body:s.discreet!==false?'Take a moment for yourself. CLEAR is here if you need it.':'A time when you sometimes experience cravings is approaching. Open CLEAR for support.',tag:'clear-checkin'})}}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',create);else create();
+setInterval(tick,30000);window.addEventListener('focus',tick);
+})();
