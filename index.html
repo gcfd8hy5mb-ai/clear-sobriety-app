@@ -43,7 +43,7 @@ $('clearData').onclick=()=>{if(confirm('Erase all CLEAR data stored on this devi
 let remaining=300,interval=null;const draw=()=>{$('timer').textContent=String(Math.floor(remaining/60)).padStart(2,'0')+':'+String(remaining%60).padStart(2,'0');$('timerToggle').textContent=interval?'Pause':'Start 5 minutes'};
 $('timerToggle').onclick=()=>{if(interval){clearInterval(interval);interval=null}else{interval=setInterval(()=>{if(remaining>0)remaining--;if(remaining===0){clearInterval(interval);interval=null}draw()},1000)}draw()};
 $('timerReset').onclick=()=>{clearInterval(interval);interval=null;remaining=300;draw()};
-$('finishCraving').onclick=()=>{state.managed++;state.entries.push({time:new Date().toISOString(),intensity:3,trigger:'Support session'});save();clearInterval(interval);interval=null;remaining=300;draw();alert('You made it through this moment. One step at a time.');tab('home')};
+$('finishCraving').onclick=()=>{state.managed++;save();clearInterval(interval);interval=null;remaining=300;draw();alert('You made it through this moment. One step at a time.');tab('home')};
 const messages={ground:'Name 5 things you see, 4 you can feel, 3 you hear, 2 you smell, and 1 you taste.',walk:'If safe, step outside for five minutes. Notice your surroundings as you walk.',call:'Reach out to a trusted person. You can simply say: “Could you talk with me for a few minutes?”',water:'Drink a glass of water slowly. Notice the temperature and take your time.'};Object.keys(messages).forEach(k=>$(k).onclick=()=>{$('copingText').textContent=messages[k]});
 render();draw();
 })();
