@@ -30,3 +30,8 @@ For the prototype `POST /device`, use a random 64-character hex bearer token and
 - Corrected due-time calculations to include the warning lead time; added regression tests for 30-minute and zero-minute leads.
 - Required before enabling real delivery: authenticated opt-in client registration, secure backend hosting, persistent private disk, server-only credentials, durable distributed dispatch locking, retry handling, notification quotas, rate limiting, endpoint validation, and supervised locked-iPhone testing.
 - **Important:** This prototype is not hardened for public internet access. Do not expose it or rely on it for recovery support until security testing is complete.
+
+## Worker commands (new)
+`npm run preview:reminders` reads encrypted device records and prints **only a count** of due reminders; it never sends one. `npm run dispatch:reminders` calls the delivery worker **only when** private environment variable `CLEAR_ALLOW_DELIVERY=yes` and the VAPID credentials are available. Neither command is scheduled by GitHub Pages.
+
+**Production blocker:** GitHub Pages cannot run the Node server. A persistent secure runtime and private encrypted database are required. Serverless Vercel functions with only local SQLite files are not a reliable persistent store. Do not enable delivery until hosting, device registration, security controls and locked-iPhone end-to-end tests are finished.
