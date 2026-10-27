@@ -24,3 +24,9 @@ For the prototype `POST /device`, use a random 64-character hex bearer token and
 
 ## Current integration status
 `server/index.js` now uses the encrypted SQLite store, and `server/job-preview.js` can identify due reminders without contacting any push provider. There is no active sending worker, external deployment, or iPhone subscription sync. The tests have not yet been independently executed. The server remains prototype-only and should not be exposed publicly without additional authentication, origin/abuse controls, and security review.
+
+## October 27 backend milestone
+- `dispatch.js` now exposes an explicit `dispatch(now)` sending function. **No automatic process calls it yet.**
+- Corrected due-time calculations to include the warning lead time; added regression tests for 30-minute and zero-minute leads.
+- Required before enabling real delivery: authenticated opt-in client registration, secure backend hosting, persistent private disk, server-only credentials, durable distributed dispatch locking, retry handling, notification quotas, rate limiting, endpoint validation, and supervised locked-iPhone testing.
+- **Important:** This prototype is not hardened for public internet access. Do not expose it or rely on it for recovery support until security testing is complete.
