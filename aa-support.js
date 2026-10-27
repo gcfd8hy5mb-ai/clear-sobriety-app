@@ -16,7 +16,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 // Original CLEAR exercises inspired by recovery principles; not A.A. literature.
 function recoveryPractice(){
- const host=document.getElementById('aaSupport');if(!host)return;
+ const host=document.getElementById('dailyRecovery');if(!host)return;
  const panel=document.createElement('div');panel.style.marginTop='18px';
  panel.innerHTML='<h3>Today’s recovery practice</h3><p class="small muted">One day at a time. Choose one small action for today.</p><p id="clearPrompt"></p><textarea id="clearReflection" rows="3" placeholder="Write a private reflection…" style="width:100%;border-radius:12px;padding:12px;background:#092024;color:#fff;border:1px solid #31565a"></textarea><button class="btn secondary" id="clearSaveReflection" type="button">Save today’s reflection</button><p class="small muted" id="clearReflectionStatus"></p><h3>Recovery tools</h3><div style="display:grid;gap:8px"><button class="btn secondary" type="button" id="clearAccept">Acceptance: name what I cannot control</button><button class="btn secondary" type="button" id="clearReach">Connection: who can I reach out to?</button><button class="btn secondary" type="button" id="clearReview">Personal inventory: what went well, what can improve?</button><button class="btn secondary" type="button" id="clearPause">Pause: breathe and choose my next action</button></div><p class="small muted">These are original CLEAR prompts inspired by common recovery practices, not official A.A. exercises. Spiritual practices are optional.</p>';
  host.append(panel);
