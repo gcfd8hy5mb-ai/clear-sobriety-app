@@ -22,3 +22,14 @@ test('reports due windows within grace interval only',()=>{
  assert.equal(dueWindows(windows,'America/Chicago',time('2026-10-27T22:30:45Z')).length,1);
  assert.equal(dueWindows(windows,'America/Chicago',time('2026-10-27T22:36:00Z')).length,0);
 });
+
+test('lead time reminder becomes due at its scheduled instant',()=>{
+ const w=[{weekday:2,hour:18,minute:0}];
+ assert.equal(dueWindows(w,'America/Chicago',time('2026-10-27T22:30:45Z'),30,2).length,1);
+ assert.equal(dueWindows(w,'America/Chicago',time('2026-10-27T22:28:45Z'),30,2).length,0);
+ assert.equal(dueWindows(w,'America/Chicago',time('2026-10-27T22:35:00Z'),30,2).length,0);
+});
+test('a zero-minute lead is honored',()=>{
+ const x=nextOccurrence({weekday:2,hour:18},'America/Chicago',time('2026-10-27T20:00:00Z'),0);
+ assert.equal(x.sendAt,time('2026-10-27T23:00:00Z'));
+});
