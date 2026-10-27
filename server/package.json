@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "node --test"
+    "test": "node --test",
+    "preview:reminders": "node runner.js",
+    "dispatch:reminders": "node runner.js --send"
   },
   "dependencies": {
     "web-push": "^3.6.7"
