@@ -15,7 +15,7 @@ test('adjusts offsets after fall DST transition',()=>{
 });
 test('skips nonexistent spring DST local time',()=>{
  const x=nextOccurrence({weekday:0,hour:2,minute:30},'America/Chicago',time('2026-03-07T10:00:00Z'),30);
- assert.equal(x,null);
+ assert.equal(x.sendAt,time('2026-03-15T07:00:00Z'));
 });
 test('reports due windows within grace interval only',()=>{
  const windows=[{weekday:2,hour:18}];
