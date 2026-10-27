@@ -3,6 +3,7 @@ const KEY='clear-relapse-plan-v1';
 const el=id=>document.getElementById(id);
 const CHECK_KEY='clear-v1';
 function latestCheck(){try{const rows=JSON.parse(localStorage.getItem(CHECK_KEY)||'{}').entries||[];return rows.filter(x=>x&&x.time&&!Number.isNaN(Date.parse(x.time))).sort((a,b)=>Date.parse(b.time)-Date.parse(a.time))[0]||null}catch{return null}}
+function associateOutcome(outcome){try{const data=JSON.parse(localStorage.getItem(CHECK_KEY)||'{}');if(!Array.isArray(data.entries))return false;const t=Date.parse(outcome.time);let idx=-1,best=Infinity;data.entries.forEach((entry,i)=>{const dt=t-Date.parse(entry.time);if(dt>=0&&dt<=2*60*60*1000&&dt<best&&(!entry.copingOutcome||entry.copingOutcome.time===outcome.time)){idx=i;best=dt}});if(idx<0)return false;data.entries[idx].copingOutcome={time:outcome.time,action:outcome.action,helpful:outcome.helpful};localStorage.setItem(CHECK_KEY,JSON.stringify(data));return true}catch{return false}}
 function normalizeTrigger(t){return ({Routine:'Habit or time of day',Social:'Social pressure'})[t]||t||''}
 
 function load(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch{return {}}}
@@ -15,7 +16,7 @@ function init(){
 
  el('clearPlanSave').onclick=()=>{const v=load();const action=el('clearAction').value;if(!action){el('clearPlanStatus').textContent='Choose an action to save your plan.';return}v.action=action;v.trigger=el('clearTrigger').value;v.updated=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(v));el('clearPlanStatus').textContent='Your plan is saved on this device.';draw()};
  el('clearPlanReview').onclick=()=>{el('clearPlanReviewBox').hidden=!el('clearPlanReviewBox').hidden};
- el('clearPlanReviewSave').onclick=()=>{const v=load();v.reflection=el('clearPlanReflection').value.slice(0,2000);v.reflectedAt=new Date().toISOString();const helpful=el('clearPlanHelpful').value;if(helpful&&v.action){v.outcomes=[...(v.outcomes||[]),{time:v.reflectedAt,trigger:v.trigger||'',action:v.action,helpful}].slice(-200)}localStorage.setItem(KEY,JSON.stringify(v));el('clearPlanStatus').textContent='Reflection saved privately.';el('clearPlanReviewBox').hidden=true;draw()};
+ el('clearPlanReviewSave').onclick=()=>{const v=load();v.reflection=el('clearPlanReflection').value.slice(0,2000);v.reflectedAt=new Date().toISOString();const helpful=el('clearPlanHelpful').value;if(helpful&&v.action){const outcome={time:v.reflectedAt,trigger:v.trigger||'',action:v.action,helpful};v.outcomes=[...(v.outcomes||[]),outcome].slice(-200);const linked=associateOutcome(outcome);el('clearPlanStatus').textContent=linked?'Reflection saved and connected to your recent check-in.':'Reflection saved privately; no recent check-in to connect.'}localStorage.setItem(KEY,JSON.stringify(v));if(!helpful)el('clearPlanStatus').textContent='Reflection saved privately.';el('clearPlanReviewBox').hidden=true;draw()};
  const v=load();if(!el('clearTrigger').value)el('clearTrigger').value=v.trigger||'';el('clearAction').value=v.action||'';el('clearPlanReflection').value=v.reflection||'';draw();
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
