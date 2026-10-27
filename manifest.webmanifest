@@ -1,0 +1,19 @@
+{
+  "name": "CLEAR — Sobriety Support",
+  "short_name": "CLEAR",
+  "description": "Private on-device craving support and pattern insights",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#061416",
+  "theme_color": "#071b1d",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
