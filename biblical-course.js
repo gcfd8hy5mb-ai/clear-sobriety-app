@@ -36,7 +36,7 @@ prompt:'Write one responsibility that belongs to you, and one that belongs to so
 'Choose an action within your control: pause for two minutes, contact a trusted person, avoid a particular trigger when safe, ask about professional care, or schedule a support meeting. A setback is information about what help may be needed, not proof of personal failure.',
 'Faith may be an important source of hope, but Scripture study is not a replacement for appropriate treatment, medication, or crisis services.'],
 prompt:'What one realistic step can you take in the next 24 hours, and who could support you?',check:{q:'What is the safest interpretation of a setback?',a:['My recovery is over','I need to hide this','I can review what happened and seek appropriate support'],correct:2,why:'A setback calls for learning, safety and support, not shame.'}}
-]; const extras=window.CLEAR_RECOVERY_CONTENT||{core:[],paths:{}}; const more=window.CLEAR_RECOVERY_CONTENT_V2||{core:[],paths:{}};const allLessons=[...lessons,...(extras.core||[]),...(more.core||[])].map(x=>({...x,stage:x.stage||1}));const applied=window.CLEAR_RECOVERY_CONTENT_V3||{core:[],paths:{}};const theology=window.CLEAR_THEOLOGY_V1||{core:[],paths:{}};allLessons.push(...(theology.core||[]));const pathLessons=t=>[...((extras.paths||{})[t]||[]),...((more.paths||{})[t]||[]),...((applied.paths||{})[t]||[]),...((theology.paths||{})[t]||[])];
+]; const extras=window.CLEAR_RECOVERY_CONTENT||{core:[],paths:{}}; const more=window.CLEAR_RECOVERY_CONTENT_V2||{core:[],paths:{}};const allLessons=[...lessons,...(extras.core||[]),...(more.core||[])].map(x=>({...x,stage:x.stage||1}));const applied=window.CLEAR_RECOVERY_CONTENT_V3||{core:[],paths:{}};const theology=window.CLEAR_THEOLOGY_V1||{core:[],paths:{}};const study=window.CLEAR_STUDY_V1||{weeks:[],daily:[]};allLessons.push(...(theology.core||[]),...(study.weeks||[]));const pathLessons=t=>[...((extras.paths||{})[t]||[]),...((more.paths||{})[t]||[]),...((applied.paths||{})[t]||[]),...((theology.paths||{})[t]||[])];
 const $=id=>document.getElementById(id);
 const safeLoad=()=>{try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');return x&&typeof x==='object'?x:{}}catch{return {}}};
 let s={track:'',tracks:[],done:[],responses:{},...safeLoad()};
@@ -63,6 +63,7 @@ function el(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=
 function status(t){const x=$('courseStatus');if(x)x.textContent=t}
 function paragraph(parent,t,cls='muted'){parent.append(el('p',cls,t))}
 function btn(label,fn,cls='btn secondary'){const b=el('button',cls,label);b.type='button';b.onclick=fn;return b}
+function renderDaily(host){const items=study.daily||[];if(!items.length)return;const start=new Date();const localDay=new Date(start.getFullYear(),start.getMonth(),start.getDate());const dayIndex=Math.floor(localDay.getTime()/86400000);const item=items[((dayIndex%items.length)+items.length)%items.length];const card=el('div','card');card.append(el('div','eyebrow','Daily Bible Study · '+start.toLocaleDateString()),el('h2','',item.title));paragraph(card,'Read: '+item.scripture,'notice small');paragraph(card,'Biblical interpretation: '+item.context,'muted');paragraph(card,'Reflection: '+item.prompt,'muted');paragraph(card,'Optional prayer: '+item.prayer,'muted');paragraph(card,'Daily readings rotate through a growing original study library. Read the passage in your Bible; reflections are not graded.','footer-note');host.append(card)}
 function render(){
 const host=$('courseBody');if(!host)return;host.replaceChildren();
 const intro=el('div','card');intro.append(el('div','eyebrow','Private learning path'),el('h2','', 'Choose a recovery focus'));
@@ -78,7 +79,7 @@ paragraph(intro,'Select multiple areas if needed. Progress is shared for foundat
 if(s.tracks.includes('codependency')||s.tracks.includes('family'))paragraph(intro,'Caring for someone does not make you responsible for their decisions. Forgiveness never requires remaining in danger.','notice small');
 if(s.tracks.includes('alcohol')||s.tracks.includes('substances'))paragraph(intro,'Stopping alcohol or sedatives abruptly can be dangerous. Seek medical guidance about withdrawal. Other substance-related risks may require professional care.','notice warning small');
 if(s.tracks.includes('eating'))paragraph(intro,'Eating-related difficulties may require specialist care; CLEAR is not a treatment or diet plan.','notice warning small');
-host.append(intro);
+host.append(intro);renderDaily(host);
 const p=el('div','card');p.append(el('div','eyebrow','12-stage journey'),el('h2','','Course roadmap'));paragraph(p,'Core lessons and selected-path lessons are available. Additional course depth is still being developed.','small muted');
 const available=availableLessons();const completed=available.filter(l=>s.done.includes(l.id)).length;paragraph(p,completed+' of '+available.length+' available lessons completed. Personal reflections are optional.','small muted');
 const bar=el('div','bar');const fill=el('i');fill.style.width=(100*completed/Math.max(1,available.length))+'%';bar.append(fill);p.append(bar);
