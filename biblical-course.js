@@ -111,6 +111,7 @@ const dailyBtn=el('button');dailyBtn.type='button';dailyBtn.dataset.tab='dailyBi
 const dailyHomeBtn=btn('Open Daily Bible Study →',openDaily);dailyHomeBtn.style.margin='0 0 16px';home.insertBefore(dailyHomeBtn,homeBtn);
 const navBtn=el('button','','');navBtn.dataset.tab='course';navBtn.innerHTML='<strong>✦</strong>Course';nav.append(navBtn,dailyBtn);nav.style.gridTemplateColumns='repeat(6,1fr)';
 function activate(){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('hide',x.id!=='course'));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===navBtn));window.scrollTo(0,0);render()}
+window.CLEAR_nextStage=focus=>{const pool=availableLessons().filter(x=>x.track===focus);const next=pool.find(x=>!s.done.includes(x.id));return next?.stage||pool.at(-1)?.stage||1};
 navBtn.onclick=activate;
 window.addEventListener('clear:open-path-lesson',event=>{
  const focus=event.detail?.focus,stage=Number(event.detail?.stage)||1;
