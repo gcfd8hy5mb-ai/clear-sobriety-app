@@ -19,6 +19,8 @@ jobs:
           python-version: '3.12'
       - name: Import and validate official WEBP 66-book text
         run: python scripts/import-webp.py
+      - name: Audit all imported books and verses
+        run: python scripts/audit-bible.py
       - name: Commit imported Bible files
         run: |
           git config user.name "github-actions[bot]"
