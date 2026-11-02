@@ -409,7 +409,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Serve the least",
     "scripture": "Matthew 25:31-46",
-    "context": "Jesus connects care for people in need with faithful service.",
+    "context": "In Jesus' scene of judgment, the Son of Man identifies with hungry, thirsty, displaced, sick, and imprisoned people; the passage connects treatment of the vulnerable with accountability before him.",
     "prompt": "What concrete act of care is available to you today?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
