@@ -10,7 +10,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Rest for a purpose",
     "scripture": "Genesis 2:1-3",
-    "context": "The seventh day completes the creation pattern by highlighting God's rest and blessing.",
+    "context": "The seventh day completes the creation pattern by highlighting God's rest and blessing. God blesses and sets apart the seventh day; the account establishes a rhythm of creation and rest rather than portraying God as exhausted.",
     "prompt": "What healthy limit might help you make room for worship and rest?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -31,7 +31,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Noah walks faithfully",
     "scripture": "Genesis 6:9-22",
-    "context": "Noah obeys God's instructions in a world described as corrupt and violent.",
+    "context": "Noah obeys God's instructions in a world described as corrupt and violent. The flood account places Noah's obedience alongside divine judgment on widespread violence; it should not be reduced to a simple lesson about building projects.",
     "prompt": "What faithful action can you take before seeing results?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -45,14 +45,14 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "God sees Hagar",
     "scripture": "Genesis 16:7-13",
-    "context": "God meets Hagar in distress and speaks to a person overlooked by others.",
+    "context": "God meets Hagar in distress and speaks to a person overlooked by others. The angel finds Hagar as she flees mistreatment, and the narrative gives a marginalized woman a voice and a promise concerning her child.",
     "prompt": "Who around you may need to be seen and heard?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "A hard-won reconciliation",
     "scripture": "Genesis 33:1-11",
-    "context": "Jacob and Esau meet again after years of estrangement and conflict.",
+    "context": "Jacob and Esau meet again after years of estrangement and conflict. Esau runs to embrace Jacob, but their reconciliation follows Jacob's earlier deception and years of separation.",
     "prompt": "What humble first step could repair a strained relationship?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -66,14 +66,14 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "God works through hardship",
     "scripture": "Genesis 50:15-21",
-    "context": "Joseph refuses vengeance and recognizes how God brought good despite human evil.",
+    "context": "Joseph refuses vengeance and recognizes how God brought good despite human evil. Joseph acknowledges that his brothers intended harm, even as he trusts that God worked toward preservation of life.",
     "prompt": "How can you resist revenge while pursuing what is good?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "Freedom and remembrance",
     "scripture": "Exodus 12:21-28",
-    "context": "The Passover instructions link deliverance with remembering and teaching future generations.",
+    "context": "The Passover instructions link deliverance with remembering and teaching future generations. The instructions are specifically for Israel's Passover remembrance in the context of deliverance from Egyptian bondage.",
     "prompt": "What story of God's care should you remember or share?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -87,14 +87,14 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Manna for today",
     "scripture": "Exodus 16:11-21",
-    "context": "God provides daily food in the wilderness and teaches Israel to depend on his provision.",
+    "context": "God provides daily food in the wilderness and teaches Israel to depend on his provision. The manna is gathered in daily portions and cannot be hoarded without consequence, teaching dependence within a particular wilderness story.",
     "prompt": "What would trusting God for today's needs change?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "A community of responsibility",
     "scripture": "Exodus 18:13-26",
-    "context": "Jethro advises Moses to share responsibility and establish wise leadership.",
+    "context": "Jethro advises Moses to share responsibility and establish wise leadership. Jethro recognizes Moses' unsustainable workload and proposes trustworthy judges to handle ordinary disputes.",
     "prompt": "Where would asking for help be wiser than carrying everything alone?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -108,7 +108,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "A priestly blessing",
     "scripture": "Numbers 6:22-27",
-    "context": "God gives Israel a blessing of protection, grace, and peace.",
+    "context": "God gives Israel a blessing of protection, grace, and peace. The blessing is given to Aaron and his sons to speak over Israel, placing divine grace and peace at the center.",
     "prompt": "Who could you bless through a thoughtful word or action?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -136,28 +136,28 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Remembering provision",
     "scripture": "Joshua 4:1-9",
-    "context": "Israel sets up stones as a lasting reminder of crossing the Jordan.",
+    "context": "Israel sets up stones as a lasting reminder of crossing the Jordan. The memorial stones invite later generations to ask about Israel's crossing and hear the story of deliverance.",
     "prompt": "What reminder would help you remember God's help?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "A courageous decision",
     "scripture": "Ruth 1:6-18",
-    "context": "Ruth commits herself to Naomi despite an uncertain future.",
+    "context": "Ruth commits herself to Naomi despite an uncertain future. Ruth's loyalty crosses ethnic and family boundaries; she chooses solidarity with Naomi despite a vulnerable future.",
     "prompt": "How can loyal love guide an inconvenient decision?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "Kindness in ordinary work",
     "scripture": "Ruth 2:1-13",
-    "context": "Boaz treats Ruth with generosity and protection as she gathers grain.",
+    "context": "Boaz treats Ruth with generosity and protection as she gathers grain. Boaz directs his workers to protect Ruth and allows her to glean, illustrating practical hospitality under Israel's provision for the poor.",
     "prompt": "Who can you treat with greater dignity in an ordinary encounter?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "Speak, Lord",
     "scripture": "1 Samuel 3:1-21",
-    "context": "Samuel learns to recognize and respond to God's call.",
+    "context": "Samuel learns to recognize and respond to God's call. Samuel initially mistakes the voice for Eli's; Eli helps him recognize and answer the call.",
     "prompt": "What distractions make it difficult to listen carefully?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -178,7 +178,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "God in a quiet voice",
     "scripture": "1 Kings 19:9-18",
-    "context": "Elijah meets God after exhaustion and discouragement, and receives renewed direction.",
+    "context": "Elijah meets God after exhaustion and discouragement, and receives renewed direction. Elijah voices isolation and fear, while God provides renewed purpose and reminds him he is not the only faithful person.",
     "prompt": "What might rest and attentive listening reveal?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -206,7 +206,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Worship in loss",
     "scripture": "Job 1:13-22",
-    "context": "Job grieves terrible losses while refusing to abandon God.",
+    "context": "Job grieves terrible losses while refusing to abandon God. The narrator distinguishes Job's grief and worship from any suggestion that his children deserved the calamity.",
     "prompt": "How can you make room for honest grief without giving up hope?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -227,14 +227,14 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "A clean heart",
     "scripture": "Psalm 51:1-17",
-    "context": "The psalm joins confession with a plea for inward renewal.",
+    "context": "The psalm joins confession with a plea for inward renewal. The plea for cleansing is joined to recognition of wrongdoing and a desire for transformed conduct.",
     "prompt": "What needs confession and a concrete step toward change?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "Be still",
     "scripture": "Psalm 46:1-11",
-    "context": "The psalm describes God as refuge amid upheaval and calls people to recognize his sovereignty.",
+    "context": "The psalm describes God as refuge amid upheaval and calls people to recognize his sovereignty. The refrain names God as refuge as nations rage; being still follows the recognition of God's sovereignty amid conflict.",
     "prompt": "What turmoil can you stop trying to control for a moment?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
