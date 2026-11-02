@@ -38,7 +38,7 @@ const [verse,interpretation,exercise]=guidance[path];const heading=document.crea
 }
 field.onchange=show;show();
 }
-function init(){const page=$('insights');if(!page)return;const section=document.createElement('section');section.className='card';section.innerHTML='<div class="eyebrow">Bible and reflection</div><h2>Your growth insights</h2><p class="small muted">Optional Scripture suggestions based on your chosen focus and the check-ins you record.</p><div id="growthInsights"></div>';const entry=$('personalCheckins');if(entry)entry.after(section);else page.prepend(section);
+function init(){const page=$('insights');if(!page)return;const section=document.createElement('section');section.className='card';section.id='growthInsightsCard';section.innerHTML='<div class="eyebrow">Bible and reflection</div><h2>Your growth insights</h2><p class="small muted">Optional Scripture suggestions based on your chosen focus and the check-ins you record.</p><div id="growthInsights"></div>';const entry=$('personalCheckins');if(entry)entry.after(section);else page.prepend(section);
 document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.tab==='insights')render()}));$('growthSave')?.addEventListener('click',()=>setTimeout(render,0));render()}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
