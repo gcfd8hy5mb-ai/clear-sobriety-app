@@ -64,7 +64,35 @@ function status(t){const x=$('courseStatus');if(x)x.textContent=t}
 function paragraph(parent,t,cls='muted'){parent.append(el('p',cls,t))}
 function btn(label,fn,cls='btn secondary'){const b=el('button',cls,label);b.type='button';b.onclick=fn;return b}
 function nivLink(parent,reference){const a=el('a','btn secondary','Read in NIV →');a.href='https://www.biblegateway.com/passage/?search='+encodeURIComponent(reference)+'&version=NIV';a.target='_blank';a.rel='noopener noreferrer';a.style.display='block';a.style.textAlign='center';a.style.textDecoration='none';a.style.margin='12px 0';parent.append(a)}
-function renderDaily(host){const start=new Date();const item=window.CLEAR_DailyScripture?.today(start);if(!item)return;const card=el('div','card');card.append(el('div','eyebrow','Daily Bible Study · '+start.toLocaleDateString()),el('h2','',item.title));paragraph(card,'Read: '+item.scripture,'notice small');paragraph(card,'Biblical interpretation: '+item.context,'muted');paragraph(card,'Reflection: '+item.prompt,'muted');paragraph(card,'Optional prayer: '+item.prayer,'muted');nivLink(card,item.scripture);const preview=el('div','card');card.append(preview);window.CLEAR_BiblePassages?.preview(preview,item.scripture);paragraph(card,'Daily readings rotate through a growing original study library. Read the passage in your Bible; reflections are not graded.','footer-note');host.append(card)}
+const DAILY_KEY='clear-daily-study-history-v1';
+function dailyProgress(){try{const value=JSON.parse(localStorage.getItem(DAILY_KEY)||'{}');return value&&typeof value==='object'?value:{}}catch{return {}}}
+function storeDaily(value){try{localStorage.setItem(DAILY_KEY,JSON.stringify(value));return true}catch{return false}}
+function renderDaily(host,selected){
+ const list=window.CLEAR_DailyScripture?.readings()||[],today=window.CLEAR_DailyScripture?.today();
+ const item=selected||today;if(!item)return;
+ const progress=dailyProgress(),visited=progress.completed||{},card=el('div','card');
+ card.append(el('div','eyebrow','Daily Bible Study · '+new Date().toLocaleDateString()),el('h2','',item.title));
+ paragraph(card,'Read: '+item.scripture,'notice small');paragraph(card,'Biblical interpretation: '+item.context,'muted');
+ paragraph(card,'Reflection: '+item.prompt,'muted');paragraph(card,'Optional prayer: '+item.prayer,'muted');nivLink(card,item.scripture);
+ const preview=el('div','card');card.append(preview);window.CLEAR_BiblePassages?.preview(preview,item.scripture);
+ card.append(btn(visited[item.scripture]?'Mark as not completed':'Mark study completed',()=>{
+  const state=dailyProgress();state.completed=state.completed||{};
+  if(state.completed[item.scripture])delete state.completed[item.scripture];else state.completed[item.scripture]=new Date().toISOString();
+  if(storeDaily(state)){host.replaceChildren();renderDaily(host,item)}
+ },'btn secondary'));
+ paragraph(card,'Study completion is private, optional, and separate from recovery coursework.','footer-note');
+ host.append(card);
+ const history=el('section','card');history.append(el('h2','','Study history'));
+ const completed=Object.keys(visited).filter(ref=>list.some(x=>x.scripture===ref));
+ paragraph(history,completed.length+' of '+list.length+' unique readings completed.','small muted');
+ const picker=el('select','input');picker.setAttribute('aria-label','Choose a previous or upcoming Bible study');
+ list.forEach(x=>{const o=el('option','',x.title+' · '+x.scripture);o.value=x.scripture;picker.append(o)});
+ picker.value=item.scripture;picker.onchange=()=>{const chosen=list.find(x=>x.scripture===picker.value);if(chosen){host.replaceChildren();renderDaily(host,chosen)}};
+ history.append(picker);
+ const recent=completed.sort((a,b)=>String(visited[b]).localeCompare(String(visited[a]))).slice(0,8);
+ for(const ref of recent){const row=btn('✓ '+ref,()=>{host.replaceChildren();renderDaily(host,list.find(x=>x.scripture===ref))},'btn secondary tiny');row.style.margin='4px';history.append(row)}
+ host.append(history);
+}
 function render(){
 const host=$('courseBody');if(!host)return;host.replaceChildren();
 const intro=el('div','card');intro.append(el('div','eyebrow','Private learning path'),el('h2','', 'Choose a recovery focus'));
