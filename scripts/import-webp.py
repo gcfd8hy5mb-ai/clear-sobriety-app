@@ -9,7 +9,9 @@ def clean(s):
  s=re.sub(r'\\(?:w|\+w)\s+([^|\\]+)(?:\|[^\\]+)?\\(?:w|\+w)\\*',r'\1',s)
  s=re.sub(r'\\[+a-zA-Z0-9*]+(?:\s+)?',' ',s)
  return re.sub(r'\s+',' ',s).strip()
-with urllib.request.urlopen(URL,timeout=90) as response: payload=response.read()
+request=urllib.request.Request(URL,headers={'User-Agent':'CLEAR-Bible-Importer/1.0'})
+with urllib.request.urlopen(request,timeout=90) as response: payload=response.read()
+if len(payload)<1000000:sys.exit('Downloaded source unexpectedly small; refusing incomplete import')
 z=zipfile.ZipFile(io.BytesIO(payload));found={}
 for name in z.namelist():
  if not name.lower().endswith(('.usfm','.sfm')):continue
@@ -37,7 +39,7 @@ for name in z.namelist():
  if chapters:found[code]=chapters
 missing=[x for x in CODES if x not in found]
 total=sum(len(v) for book in found.values() for v in book.values())
-if missing or sum(map(len,[v for v in found.values()]))<1189 or total<30000:
+if missing or sum(map(len,[v for v in found.values()]))!=1189 or total<30000:
  sys.exit(f"Bible integrity check failed: missing={missing}, chapters={sum(map(len,found.values()))}, verses={total}")
 ROOT.mkdir(parents=True,exist_ok=True)
 for code,chapters in found.items():
