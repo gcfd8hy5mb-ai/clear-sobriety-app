@@ -7,18 +7,18 @@ const make=(tag,text,cls)=>{let x=document.createElement(tag);if(text!==undefine
 function init(){
 const app=document.querySelector('main.app'),nav=document.querySelector('.nav-inner');if(!app||!nav)return;
 const page=make('section',undefined,'page hide');page.id='bibleLibrary';page.append(make('div','Scripture library','eyebrow'),make('h1','Read the Bible','title'));
-page.append(make('p','The complete 66-book Protestant canon is indexed here. Full offline verse text is not yet imported. You can open a book in the official public-domain World English Bible reader.','muted'));
+page.append(make('p','Browse the 66-book Protestant Bible. Chapters display here once the verified World English Bible text has been imported.','muted'));
 const chooser=make('div',undefined,'card');
 const select=make('select',undefined,'input');select.setAttribute('aria-label','Bible book');
 books.forEach((name,i)=>{const opt=make('option',name);opt.value=String(i);select.append(opt)});chooser.append(select);
 const chapter=make('input',undefined,'input');chapter.type='number';chapter.min='1';chapter.max='150';chapter.value='1';chapter.setAttribute('aria-label','Chapter');chooser.append(chapter);
 const action=make('button','Open in official WEB reader','btn');action.type='button';
 const link=make('a','Official World English Bible','small');link.href='https://ebible.org/engwebp/';link.target='_blank';link.rel='noopener noreferrer';
-const verses=make('div',undefined,'card');verses.id='bibleVerseContent';page.append(verses);const explanation=make('p','Select a book and chapter. While the Bible text import is pending, links open the verified public-domain Bible site.','footer-note');
+const verses=make('div',undefined,'card');verses.id='bibleVerseContent';const explanation=make('p','Select a book and chapter to read in CLEAR when available, or visit the official Bible source.','footer-note');
 async function readChapter(){const code=bookIds[Number(select.value)],num=String(Number(chapter.value));verses.replaceChildren(make('p','Loading '+books[Number(select.value)]+' '+num+'…','muted'));try{const response=await fetch('./bible-data/'+code+'.json');if(!response.ok)throw Error('not yet imported');const data=await response.json();const chapterVerses=data[num];if(!chapterVerses)throw Error('chapter unavailable');verses.replaceChildren(make('h2',books[Number(select.value)]+' '+num));for(const [verse,body] of Object.entries(chapterVerses)){const line=make('p',verse+'  '+body,'bible-verse');line.style.lineHeight='1.8';verses.append(line)}}catch{verses.replaceChildren(make('p','The complete text is not installed yet. Use the official Bible link below until the verified import finishes.','muted'))}}
 function refresh(){const i=Number(select.value),n=Number(chapter.value);const good=Number.isInteger(n)&&n>=1&&n<=150&&Number.isInteger(i)&&i>=0&&i<66;action.disabled=!good;explanation.textContent=good?'Selected: '+books[i]+' '+n+'. External Bible reader opens at the translation homepage; select the book and chapter there.':'Choose a valid chapter number.'}
 action.textContent='Read chapter inside CLEAR';action.onclick=()=>{if(!action.disabled)readChapter()};
-select.onchange=refresh;chapter.oninput=refresh;chooser.append(action,explanation,link);page.append(chooser);app.append(page);refresh();readChapter();
+select.onchange=refresh;chapter.oninput=refresh;chooser.append(action,explanation,link);page.append(chooser,verses);app.append(page);refresh();readChapter();
 const tab=make('button');tab.type='button';tab.innerHTML='<strong>▤</strong>Library';tab.dataset.tab='bibleLibrary';nav.append(tab);nav.style.gridTemplateColumns='repeat(7,minmax(0,1fr))';
 tab.onclick=()=>{document.querySelectorAll('.page').forEach(p=>p.classList.toggle('hide',p!==page));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b===tab));window.scrollTo(0,0)};
 document.querySelectorAll('.nav button').forEach(b=>{if(b!==tab)b.addEventListener('click',()=>{page.classList.add('hide');tab.classList.remove('active')})});
