@@ -3,7 +3,7 @@ window.CLEAR_DAILY_BATCH_05=[
   {
     "scripture": "Matthew 3:13-17",
     "title": "Jesus is baptized",
-    "context": "At Jesus' baptism the Spirit descends and the Father's approval is heard.",
+    "context": "At Jesus' baptism the Spirit descends and the Father's approval is heard. The account identifies Jesus as the beloved Son and presents the Spirit descending; Christian theology sees a significant revelation of the Father, Son, and Spirit.",
     "prompt": "What does Jesus' willingness to identify with people teach you about humility?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
@@ -17,7 +17,7 @@ window.CLEAR_DAILY_BATCH_05=[
   {
     "scripture": "Matthew 9:9-13",
     "title": "Mercy at the table",
-    "context": "Jesus calls Matthew and shares a meal with people others despise.",
+    "context": "Jesus calls Matthew and shares a meal with people others despise. Jesus answers critics by citing the priority of mercy over sacrifice and describing his mission toward sinners.",
     "prompt": "Whom might you welcome rather than dismiss?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
@@ -31,7 +31,7 @@ window.CLEAR_DAILY_BATCH_05=[
   {
     "scripture": "Matthew 20:20-28",
     "title": "Greatness through service",
-    "context": "Jesus contrasts power over others with leadership marked by service.",
+    "context": "Jesus contrasts power over others with leadership marked by service. Jesus explicitly compares Gentile rulers' domination with the servant leadership expected among his disciples.",
     "prompt": "Where can you lead by serving rather than controlling?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
@@ -52,14 +52,14 @@ window.CLEAR_DAILY_BATCH_05=[
   {
     "scripture": "Mark 2:1-12",
     "title": "Friends carry a burden",
-    "context": "Friends bring a paralyzed man to Jesus, who addresses forgiveness and healing.",
+    "context": "Friends bring a paralyzed man to Jesus, who addresses forgiveness and healing. Jesus first pronounces forgiveness, then heals the man in response to objections about his authority.",
     "prompt": "How can you help carry another person's burden?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
   {
     "scripture": "Mark 6:30-44",
     "title": "Compassion in scarcity",
-    "context": "Jesus welcomes a crowd and feeds them despite the disciples' limited resources.",
+    "context": "Jesus welcomes a crowd and feeds them despite the disciples' limited resources. Jesus has compassion on the crowd and has the disciples participate in feeding them.",
     "prompt": "What modest resource can you offer generously?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
@@ -73,35 +73,35 @@ window.CLEAR_DAILY_BATCH_05=[
   {
     "scripture": "Mark 10:17-31",
     "title": "The grip of possessions",
-    "context": "Jesus challenges a wealthy man whose possessions obstruct following him.",
+    "context": "Jesus challenges a wealthy man whose possessions obstruct following him. Jesus' challenge exposes the man's attachment to wealth while also emphasizing that salvation depends on God.",
     "prompt": "What attachment is competing with generosity?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
   {
     "scripture": "Mark 14:32-42",
     "title": "Prayer in Gethsemane",
-    "context": "Jesus prays honestly about suffering and submits to the Father's will.",
+    "context": "Jesus prays honestly about suffering and submits to the Father's will. Jesus' prayer names his anguish and the coming suffering, showing that obedience is not the absence of distress.",
     "prompt": "How can honest prayer accompany a difficult responsibility?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
   {
     "scripture": "Luke 1:26-38",
     "title": "Mary's courageous yes",
-    "context": "Mary receives unexpected news and responds with trust despite uncertainty.",
+    "context": "Mary receives unexpected news and responds with trust despite uncertainty. Mary asks how the announcement will happen and then offers willing acceptance; faith is not presented as the absence of questions.",
     "prompt": "What commitment requires courage without complete knowledge?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
   {
     "scripture": "Luke 1:46-55",
     "title": "A song of reversal",
-    "context": "Mary praises God's mercy and his concern for the humble and hungry.",
+    "context": "Mary praises God's mercy and his concern for the humble and hungry. Mary celebrates God's attention to the humble and the reversal of unjust power, not merely private happiness.",
     "prompt": "Whose dignity can you honor today?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
   {
     "scripture": "Luke 5:1-11",
     "title": "Called from ordinary work",
-    "context": "Jesus calls fishermen to follow after a surprising catch.",
+    "context": "Jesus calls fishermen to follow after a surprising catch. Peter responds with awareness of his unworthiness before receiving the call to follow Jesus.",
     "prompt": "How might ordinary work become a place of faithful response?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
@@ -115,7 +115,7 @@ window.CLEAR_DAILY_BATCH_05=[
   {
     "scripture": "Luke 8:4-15",
     "title": "Good soil",
-    "context": "Jesus' parable describes different responses to hearing God's word.",
+    "context": "Jesus' parable describes different responses to hearing God's word. The explanation connects fruitful hearing with receiving the word, persevering, and resisting competing pressures.",
     "prompt": "What distracts you from putting a good teaching into practice?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
@@ -129,7 +129,7 @@ window.CLEAR_DAILY_BATCH_05=[
   {
     "scripture": "Luke 17:11-19",
     "title": "The grateful return",
-    "context": "One healed man returns to thank Jesus while the others continue on.",
+    "context": "One healed man returns to thank Jesus while the others continue on. The returning man is identified as a Samaritan, making his gratitude especially striking in the story.",
     "prompt": "Whom do you need to thank directly?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
@@ -143,14 +143,14 @@ window.CLEAR_DAILY_BATCH_05=[
   {
     "scripture": "John 2:1-11",
     "title": "A sign at Cana",
-    "context": "Jesus' first sign in John reveals his glory through unexpected abundance at a wedding.",
+    "context": "Jesus' first sign in John reveals his glory through unexpected abundance at a wedding. John identifies this as a sign revealing Jesus' glory, inviting belief beyond the immediate provision of wine.",
     "prompt": "How can you notice God's generosity in ordinary celebrations?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
   {
     "scripture": "John 5:1-15",
     "title": "A difficult healing",
-    "context": "Jesus heals a man who has long been unable to walk, provoking dispute over the Sabbath.",
+    "context": "Jesus heals a man who has long been unable to walk, provoking dispute over the Sabbath. The controversy concerns carrying a mat on the Sabbath, underscoring the narrative's dispute over Jesus' authority.",
     "prompt": "How can compassion take priority over a rigid assumption?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
@@ -164,14 +164,14 @@ window.CLEAR_DAILY_BATCH_05=[
   {
     "scripture": "John 12:1-8",
     "title": "A costly act of devotion",
-    "context": "Mary anoints Jesus, and her generosity is challenged by onlookers.",
+    "context": "Mary anoints Jesus, and her generosity is challenged by onlookers. Jesus interprets Mary's act in relation to his burial, giving the gesture significance beyond its expense.",
     "prompt": "How can you honor sincere devotion without judging appearances?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
   {
     "scripture": "Acts 1:6-14",
     "title": "Waiting together",
-    "context": "The disciples await the Spirit with prayer after Jesus' ascension.",
+    "context": "The disciples await the Spirit with prayer after Jesus' ascension. Jesus redirects the disciples from predicting the kingdom's timing toward their coming witness empowered by the Spirit.",
     "prompt": "What can you do faithfully while an answer is pending?",
     "prayer": "Father, teach me to understand Your Word with care and live its truth in loving action. Through Jesus Christ, amen."
   },
