@@ -36,7 +36,7 @@ prompt:'Write one responsibility that belongs to you, and one that belongs to so
 'Choose an action within your control: pause for two minutes, contact a trusted person, avoid a particular trigger when safe, ask about professional care, or schedule a support meeting. A setback is information about what help may be needed, not proof of personal failure.',
 'Faith may be an important source of hope, but Scripture study is not a replacement for appropriate treatment, medication, or crisis services.'],
 prompt:'What one realistic step can you take in the next 24 hours, and who could support you?',check:{q:'What is the safest interpretation of a setback?',a:['My recovery is over','I need to hide this','I can review what happened and seek appropriate support'],correct:2,why:'A setback calls for learning, safety and support, not shame.'}}
-]; const extras=window.CLEAR_RECOVERY_CONTENT||{core:[],paths:{}}; const more=window.CLEAR_RECOVERY_CONTENT_V2||{core:[],paths:{}};const allLessons=[...lessons,...(extras.core||[]),...(more.core||[])].map(x=>({...x,stage:x.stage||1}));const applied=window.CLEAR_RECOVERY_CONTENT_V3||{core:[],paths:{}};const pathLessons=t=>[...((extras.paths||{})[t]||[]),...((more.paths||{})[t]||[]),...((applied.paths||{})[t]||[])];
+]; const extras=window.CLEAR_RECOVERY_CONTENT||{core:[],paths:{}}; const more=window.CLEAR_RECOVERY_CONTENT_V2||{core:[],paths:{}};const allLessons=[...lessons,...(extras.core||[]),...(more.core||[])].map(x=>({...x,stage:x.stage||1}));const applied=window.CLEAR_RECOVERY_CONTENT_V3||{core:[],paths:{}};const theology=window.CLEAR_THEOLOGY_V1||{core:[],paths:{}};allLessons.push(...(theology.core||[]));const pathLessons=t=>[...((extras.paths||{})[t]||[]),...((more.paths||{})[t]||[]),...((applied.paths||{})[t]||[]),...((theology.paths||{})[t]||[])];
 const $=id=>document.getElementById(id);
 const safeLoad=()=>{try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');return x&&typeof x==='object'?x:{}}catch{return {}}};
 let s={track:'',tracks:[],done:[],responses:{},...safeLoad()};
@@ -66,7 +66,7 @@ function btn(label,fn,cls='btn secondary'){const b=el('button',cls,label);b.type
 function render(){
 const host=$('courseBody');if(!host)return;host.replaceChildren();
 const intro=el('div','card');intro.append(el('div','eyebrow','Private learning path'),el('h2','', 'Choose a recovery focus'));
-paragraph(intro,'The same biblical foundation is available to everyone. Examples and reflections can focus on your own circumstances. This is not a diagnosis.','small muted');
+paragraph(intro,'Baptist/Evangelical foundation: Scripture, the Gospel of Jesus Christ, grace through faith, repentance, sanctification, prayer, and church community.','notice small');paragraph(intro,'The same biblical foundation is available to everyone. Examples and reflections can focus on your own circumstances. This is not a diagnosis.','small muted');
 const choices=el('div','');choices.style.display='grid';choices.style.gridTemplateColumns='repeat(2,minmax(0,1fr))';choices.style.gap='9px';
 tracks.forEach(([value,label])=>{
  const wrap=el('label','small');wrap.style.display='flex';wrap.style.gap='8px';wrap.style.alignItems='center';wrap.style.margin='0';wrap.style.padding='10px';wrap.style.border='1px solid #31565a';wrap.style.borderRadius='10px';
@@ -85,13 +85,13 @@ const bar=el('div','bar');const fill=el('i');fill.style.width=(100*completed/Mat
 stages.forEach(([name,desc],i)=>{const line=el('div','log');line.append(el('strong','',String(i+1)+'. '+name));paragraph(line,desc+(available.some(l=>(l.stage||1)===i+1)?' · lessons available':' · upcoming'),'small muted');p.append(line)});host.append(p);
 if(!s.tracks.length){const prompt=el('div','card');paragraph(prompt,'Choose a focus to open your first lesson. You can change it later without losing completed lessons.');host.append(prompt);return}
 const section=el('div','card');section.append(el('div','eyebrow','Curriculum'),el('h2','','Your lessons'));
-available.forEach((lesson,i)=>{const line=el('div','log');line.append(el('strong','',lesson.title));paragraph(line,(s.done.includes(lesson.id)?'✓ Completed · ':')+lesson.scripture,'small muted');line.append(btn('Open lesson',()=>openLesson(i),'btn secondary tiny'));section.append(line)});host.append(section);
+available.forEach((lesson,i)=>{const line=el('div','log');line.append(el('strong','',lesson.title));paragraph(line,(s.done.includes(lesson.id)?'✓ Completed · ':'')+lesson.scripture,'small muted');line.append(btn('Open lesson',()=>openLesson(i),'btn secondary tiny'));section.append(line)});host.append(section);
 }
 function openLesson(i){
 const host=$('courseBody');host.replaceChildren();const available=availableLessons();const L=available[i],box=el('article','card');
 box.append(btn('← Back to course',render,'btn secondary tiny'),el('div','eyebrow','Stage '+(L.stage||1)+' · Lesson '+(i+1)),el('h2','',L.title));
 paragraph(box,'Scripture study: '+L.scripture+'. Read these passages in your preferred Bible translation.','notice small');
-L.teach.forEach(t=>paragraph(box,t,'muted'));
+L.teach.forEach(t=>paragraph(box,t,'muted'));if(L.case){box.append(el('h2','','Biblical case study'));paragraph(box,L.case,'muted')}if(L.workbook?.length){box.append(el('h2','','Christian recovery workbook'));L.workbook.forEach((question,n)=>paragraph(box,(n+1)+'. '+question,'muted'))}
 box.append(el('h2','','Personal reflection'));paragraph(box,L.prompt,'small muted');
 const ta=el('textarea','input');ta.rows=5;ta.placeholder='Optional private reflection (stored in this browser only)';ta.value=s.responses[L.id]||'';ta.style.width='100%';box.append(ta);
 box.append(btn('Save reflection',()=>{s.responses[L.id]=ta.value.slice(0,3000);save();status('Reflection saved on this device.')},'btn secondary'));
