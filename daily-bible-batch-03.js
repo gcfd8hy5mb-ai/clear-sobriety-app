@@ -17,21 +17,21 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Faithfulness in waiting",
     "scripture": "Genesis 24:1-27",
-    "context": "Abraham's servant prays for guidance and responds with gratitude as events unfold. The servant also takes practical steps, observes Rebekah's response, and praises God rather than relying on prayer alone.",
+    "context": "Abraham's servant prays for guidance and responds with gratitude as events unfold. The servant also takes practical steps, observes Rebekah's response, and praises God rather than relying on prayer alone. The servant's request for guidance is tied to hospitality and generosity rather than a random sign.",
     "prompt": "How can you make wise preparations while remaining open to guidance?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "A dream of God's presence",
     "scripture": "Genesis 28:10-22",
-    "context": "Jacob encounters God during an unsettled journey and hears a promise of presence. Jacob receives the promise of land, descendants, and God's presence while away from home after family conflict.",
+    "context": "Jacob encounters God during an unsettled journey and hears a promise of presence. Jacob receives the promise of land, descendants, and God's presence while away from home after family conflict. The promise reflects God's covenant with Abraham and includes continued presence.",
     "prompt": "Where might you need to remember that God is with you?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "Wrestling toward change",
     "scripture": "Genesis 32:22-32",
-    "context": "Jacob wrestles through the night and receives a new name before meeting Esau. Jacob receives the name Israel but also leaves injured; the story resists an easy equation of blessing with comfort.",
+    "context": "Jacob wrestles through the night and receives a new name before meeting Esau. Jacob receives the name Israel but also leaves injured; the story resists an easy equation of blessing with comfort. Jacob receives the name Israel after a struggle that also leaves him limping.",
     "prompt": "What struggle is reshaping your priorities or identity?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -45,21 +45,21 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "God hears oppression",
     "scripture": "Exodus 2:23-25",
-    "context": "God hears Israel's groaning and remembers his covenant amid their suffering. God's hearing and remembering lead into Moses' calling, connecting divine concern with the unfolding rescue narrative.",
+    "context": "God hears Israel's groaning and remembers his covenant amid their suffering. God's hearing and remembering lead into Moses' calling, connecting divine concern with the unfolding rescue narrative. God hears, remembers, sees, and knows Israel's suffering.",
     "prompt": "Who needs you to listen seriously to their distress?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "A holy calling",
     "scripture": "Exodus 3:1-12",
-    "context": "Moses encounters God's holiness and receives a daunting call with the promise of divine presence. God identifies himself as the God of the ancestors and promises to be with Moses as he confronts Pharaoh.",
+    "context": "Moses encounters God's holiness and receives a daunting call with the promise of divine presence. God identifies himself as the God of the ancestors and promises to be with Moses as he confronts Pharaoh. God answers Moses' doubts with a promise of presence, not a claim of self-sufficiency.",
     "prompt": "What task feels beyond you, and what help do you need?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "A song of deliverance",
     "scripture": "Exodus 15:1-18",
-    "context": "Israel celebrates God's rescue after crossing the sea.",
+    "context": "Israel celebrates God's rescue after crossing the sea. The song responds to Israel's particular deliverance and celebrates God's kingship.",
     "prompt": "What good outcome deserves gratitude rather than quick forgetfulness?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -73,21 +73,21 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "A place to meet",
     "scripture": "Exodus 25:1-9",
-    "context": "Israel is invited to give willingly toward a sanctuary for worship. The offering is voluntary, and the sanctuary expresses God's promised dwelling among the people.",
+    "context": "Israel is invited to give willingly toward a sanctuary for worship. The offering is voluntary, and the sanctuary expresses God's promised dwelling among the people. Sanctuary contributions are to come from willing hearts.",
     "prompt": "How can generosity support something larger than yourself?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "God's steadfast name",
     "scripture": "Exodus 34:5-9",
-    "context": "God proclaims mercy, patience, and justice as Moses seeks renewed covenant fellowship. God's self-description includes mercy and patience alongside justice, resisting a one-sided portrait of divine character.",
+    "context": "God proclaims mercy, patience, and justice as Moses seeks renewed covenant fellowship. God's self-description includes mercy and patience alongside justice, resisting a one-sided portrait of divine character. God's description holds compassion and justice together.",
     "prompt": "Which aspect of God's character do you need to consider today?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "Justice for neighbors",
     "scripture": "Leviticus 19:9-18",
-    "context": "Israel's holiness laws require honest conduct and practical concern for vulnerable neighbors.",
+    "context": "Israel's holiness laws require honest conduct and practical concern for vulnerable neighbors. Leaving harvest edges for the poor and foreigner is part of public holiness.",
     "prompt": "What change would make your daily choices fairer?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -108,7 +108,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "A patient God",
     "scripture": "Numbers 14:17-24",
-    "context": "Moses appeals to God's steadfast love after Israel responds to fear with rebellion. Moses intercedes for rebellious Israel, yet the narrative also describes lasting consequences for that generation.",
+    "context": "Moses appeals to God's steadfast love after Israel responds to fear with rebellion. Moses intercedes for rebellious Israel, yet the narrative also describes lasting consequences for that generation. Forgiveness does not remove every consequence in this account.",
     "prompt": "How can you admit failure without abandoning hope?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -122,21 +122,21 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Justice in everyday life",
     "scripture": "Deuteronomy 24:17-22",
-    "context": "Israel is instructed to protect vulnerable people and leave provision for them. The provisions for foreigners, orphans, and widows are tied to remembering Israel's own enslavement.",
+    "context": "Israel is instructed to protect vulnerable people and leave provision for them. The provisions for foreigners, orphans, and widows are tied to remembering Israel's own enslavement. The law names foreigners, orphans, and widows and recalls Israel's history.",
     "prompt": "How can you make room for someone with fewer resources?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "A new beginning",
     "scripture": "Joshua 3:7-17",
-    "context": "Israel crosses the Jordan as Joshua leads the people into a new chapter.",
+    "context": "Israel crosses the Jordan as Joshua leads the people into a new chapter. Priests bearing the ark enter the Jordan before the people cross.",
     "prompt": "Which next step requires preparation and trust?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "A difficult choice",
     "scripture": "Joshua 24:14-24",
-    "context": "Joshua calls Israel to wholehearted covenant allegiance rather than divided loyalty. The covenant choice comes after Joshua recounts God's actions for the people, making allegiance a response to remembered history.",
+    "context": "Joshua calls Israel to wholehearted covenant allegiance rather than divided loyalty. The covenant choice comes after Joshua recounts God's actions for the people, making allegiance a response to remembered history. Joshua challenges competing loyalties and calls for a considered covenant commitment.",
     "prompt": "What competing allegiance is pulling at your priorities?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -150,21 +150,21 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Gideon's fear",
     "scripture": "Judges 6:11-24",
-    "context": "God calls Gideon while he feels weak and uncertain about his ability. Gideon questions God's presence during Midianite oppression before receiving his commission.",
+    "context": "God calls Gideon while he feels weak and uncertain about his ability. Gideon questions God's presence during Midianite oppression before receiving his commission. Gideon's questions express insecurity and concern for Israel's suffering.",
     "prompt": "Where is insecurity keeping you from responsible action?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "Faithful care",
     "scripture": "Ruth 3:1-13",
-    "context": "Ruth and Boaz navigate a vulnerable situation marked by responsibility and dignity. Boaz responds by affirming Ruth's character and undertaking the next lawful step concerning family redemption.",
+    "context": "Ruth and Boaz navigate a vulnerable situation marked by responsibility and dignity. Boaz responds by affirming Ruth's character and undertaking the next lawful step concerning family redemption. Boaz recognizes a nearer relative's prior claim in the family's situation.",
     "prompt": "How can you protect another person's dignity when circumstances are delicate?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "A prayer of gratitude",
     "scripture": "1 Samuel 2:1-10",
-    "context": "Hannah praises God's power to reverse human fortunes and lift the lowly. Hannah's song anticipates God's reversal of arrogant and powerful fortunes and his concern for the lowly.",
+    "context": "Hannah praises God's power to reverse human fortunes and lift the lowly. Hannah's song anticipates God's reversal of arrogant and powerful fortunes and his concern for the lowly. Hannah's song reaches beyond personal gratitude to reversals of status.",
     "prompt": "What answer to prayer or act of provision deserves thanks?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
