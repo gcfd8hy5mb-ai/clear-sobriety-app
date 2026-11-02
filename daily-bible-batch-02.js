@@ -304,7 +304,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "A servant of peace",
     "scripture": "Isaiah 53:1-12",
-    "context": "The suffering servant bears rejection and suffering, a passage Christians read in connection with Jesus.",
+    "context": "Isaiah describes the servant as rejected and suffering on behalf of others. Christians interpret this passage in light of Jesus' death and resurrection; its original setting is within Isaiah's message to Israel.",
     "prompt": "How does costly love challenge your idea of strength?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
