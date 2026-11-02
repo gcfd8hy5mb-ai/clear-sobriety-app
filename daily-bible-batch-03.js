@@ -248,7 +248,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "The limits of easy answers",
     "scripture": "Job 4:1-11",
-    "context": "Eliphaz begins advising Job with a simplified view of suffering that the book later challenges.",
+    "context": "Eliphaz assumes that upright people are not destroyed and that calamity follows wrongdoing. The larger book challenges his attempt to explain Job's suffering so simply.",
     "prompt": "Where might you be giving someone a too-simple answer?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -507,7 +507,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "The first witnesses",
     "scripture": "Mark 16:1-8",
-    "context": "Women discover the empty tomb and hear the announcement of Jesus' resurrection.",
+    "context": "Mary Magdalene, Mary the mother of James, and Salome find the tomb open. A young man announces that Jesus has risen, and Mark 16:8 ends with the women trembling and afraid.",
     "prompt": "Where could hope call you beyond fear?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -535,7 +535,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "The generous father",
     "scripture": "Luke 15:20-32",
-    "context": "A father welcomes his returning son and invites the resentful brother into the celebration.",
+    "context": "The father welcomes his returning younger son with compassion, then goes out to plead with the angry older son; the parable leaves the older son's response unanswered.",
     "prompt": "Where are you struggling to receive or extend grace?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
