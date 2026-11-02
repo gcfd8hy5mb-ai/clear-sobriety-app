@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  const buttons=[...home.querySelectorAll('button[data-tab="support"]')];buttons.forEach(b=>b.style.display='none');
  const actions=document.getElementById('faithActions');
  const relocate=()=>{if(!actions)return;const labels=['Open Daily Bible Study','Open Biblical Recovery Course'];for(const label of labels){const b=[...home.querySelectorAll('button')].find(x=>x.textContent.includes(label));if(b&&b.parentNode!==actions)actions.append(b)}};
- relocate();setTimeout(relocate,0);
+ relocate();setTimeout(()=>{relocate();if(actions&&!document.getElementById('homeLibraryAction')){const b=document.createElement('button');b.id='homeLibraryAction';b.className='btn secondary';b.textContent='Read the Bible';b.addEventListener('click',()=>document.querySelector('.nav button[data-tab="bibleLibrary"]')?.click());actions.append(b)}},0);
 });
 </script></main><nav class="nav"><div class="nav-inner"><button class="active" data-tab="home"><strong>⌂</strong>Home</button><button data-tab="support"><strong>♡</strong>Support</button><button data-tab="insights"><strong>◫</strong>Insights</button><button data-tab="settings"><strong>⚙</strong>Settings</button></div></nav>
 <script>
