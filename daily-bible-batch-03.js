@@ -556,7 +556,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Born from above",
     "scripture": "John 3:1-21",
-    "context": "Jesus speaks with Nicodemus about new birth and God's love for the world.",
+    "context": "Jesus tells Nicodemus that entrance into God's kingdom requires birth from above by the Spirit; the conversation continues into God's love, belief in the Son, and the contrast between light and darkness.",
     "prompt": "Which assumptions about faith need a deeper conversation?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -766,14 +766,14 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "A vision of worship",
     "scripture": "Revelation 7:9-17",
-    "context": "A diverse multitude worships God, and the vision promises comfort to people who have suffered.",
+    "context": "John's vision portrays a multitude from every nation worshiping before God's throne. An elder describes those coming through great tribulation, and the Lamb shepherds them toward life and comfort.",
     "prompt": "How can future hope deepen compassion in the present?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "All things made new",
     "scripture": "Revelation 22:1-5",
-    "context": "The final vision depicts healing, restored fellowship with God, and the end of the curse.",
+    "context": "John's final vision includes the river of life, the tree whose leaves are for the healing of the nations, and the removal of the curse; this is apocalyptic imagery of restored life with God.",
     "prompt": "What kind of restoration do you long to see?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   }
