@@ -640,14 +640,14 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Overcome evil with good",
     "scripture": "Romans 12:9-21",
-    "context": "Paul describes sincere love, humility, hospitality, and peaceable responses to hostility.",
+    "context": "Paul calls believers to genuine love, hospitality, blessing persecutors, and refusing personal revenge; verse 18 recognizes that peace is pursued as far as it depends on them.",
     "prompt": "What concrete good can you do instead of returning harm?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "Freedom to serve",
     "scripture": "Galatians 5:1-15",
-    "context": "Paul warns that Christian freedom is not permission for selfishness but an opportunity to serve in love.",
+    "context": "In a dispute about circumcision and belonging to God's people, Paul insists that freedom in Christ must be expressed through loving service rather than indulging selfish desires.",
     "prompt": "How can you use freedom responsibly today?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -710,7 +710,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Draw near",
     "scripture": "Hebrews 4:14-16",
-    "context": "Jesus is portrayed as a high priest who understands weakness and invites confident prayer.",
+    "context": "Hebrews presents Jesus as the great high priest who sympathizes with human weakness yet is without sin, inviting believers to approach God's throne for mercy and timely help.",
     "prompt": "What vulnerability could you bring honestly to God?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -724,14 +724,14 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Wisdom from above",
     "scripture": "James 3:13-18",
-    "context": "James contrasts envy and selfish ambition with wisdom that is peaceable and merciful.",
+    "context": "James tests claims of wisdom by conduct: envy and selfish ambition cause disorder, while wisdom from above is pure, peaceable, gentle, merciful, and sincere.",
     "prompt": "Does your way of handling disagreement reflect the wisdom you seek?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
   {
     "title": "Hope under pressure",
     "scripture": "1 Peter 3:13-17",
-    "context": "Peter urges a gentle, respectful explanation of Christian hope amid opposition.",
+    "context": "Peter calls believers to honor Christ, be ready to explain their hope with gentleness and respect, and maintain a clear conscience even when treated unjustly.",
     "prompt": "How can you remain clear about your faith while respecting others?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
