@@ -110,7 +110,7 @@ const biblePage=el('section','page hide');biblePage.id='dailyBible';biblePage.ap
 function openDaily(){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('hide',x!==biblePage));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===dailyBtn));bibleBody.replaceChildren();renderDaily(bibleBody);window.scrollTo(0,0)}
 const dailyBtn=el('button');dailyBtn.type='button';dailyBtn.dataset.tab='dailyBible';dailyBtn.innerHTML='<strong>✝</strong>Bible';dailyBtn.onclick=openDaily;
 const dailyHomeBtn=btn('Open Daily Bible Study →',openDaily);dailyHomeBtn.style.margin='0 0 16px';home.insertBefore(dailyHomeBtn,homeBtn);
-const navBtn=el('button','','');navBtn.dataset.tab='course';navBtn.innerHTML='<strong>✦</strong>Course';nav.append(navBtn,dailyBtn);nav.style.gridTemplateColumns='repeat(6,1fr)';
+const navBtn=el('button','','');navBtn.dataset.tab='course';navBtn.innerHTML='<strong>✦</strong>Course';nav.append(navBtn);nav.style.gridTemplateColumns='repeat(5,1fr)';
 function activate(){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('hide',x.id!=='course'));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===navBtn));window.scrollTo(0,0);render()}
 window.CLEAR_nextStage=focus=>{const pool=availableLessons().filter(x=>x.track===focus);const next=pool.find(x=>!s.done.includes(x.id));return next?.stage||pool.at(-1)?.stage||1};
 navBtn.onclick=activate;
