@@ -36,7 +36,7 @@ prompt:'Write one responsibility that belongs to you, and one that belongs to so
 'Choose an action within your control: pause for two minutes, contact a trusted person, avoid a particular trigger when safe, ask about professional care, or schedule a support meeting. A setback is information about what help may be needed, not proof of personal failure.',
 'Faith may be an important source of hope, but Scripture study is not a replacement for appropriate treatment, medication, or crisis services.'],
 prompt:'What one realistic step can you take in the next 24 hours, and who could support you?',check:{q:'What is the safest interpretation of a setback?',a:['My recovery is over','I need to hide this','I can review what happened and seek appropriate support'],correct:2,why:'A setback calls for learning, safety and support, not shame.'}}
-]; const extras=window.CLEAR_RECOVERY_CONTENT||{core:[],paths:{}}; const allLessons=[...lessons,...(extras.core||[]).map(x=>({...x,stage:x.stage||1}))];
+]; const extras=window.CLEAR_RECOVERY_CONTENT||{core:[],paths:{}}; const more=window.CLEAR_RECOVERY_CONTENT_V2||{core:[],paths:{}};const allLessons=[...lessons,...(extras.core||[]),...(more.core||[])].map(x=>({...x,stage:x.stage||1}));const pathLessons=t=>[...((extras.paths||{})[t]||[]),...((more.paths||{})[t]||[])];
 const $=id=>document.getElementById(id);
 const safeLoad=()=>{try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');return x&&typeof x==='object'?x:{}}catch{return {}}};
 let s={track:'',done:[],responses:{},...safeLoad()};if(!Array.isArray(s.done))s.done=[];if(!s.responses||typeof s.responses!=='object')s.responses={};
@@ -56,7 +56,7 @@ if(s.track==='alcohol'||s.track==='substances'){paragraph(intro,'Important: stop
 if(s.track==='eating'){paragraph(intro,'Eating-related difficulties may require specialized clinical support. CLEAR does not recommend restriction, fasting, purging or weight targets.','notice warning small')}
 host.append(intro);
 const p=el('div','card');p.append(el('div','eyebrow','12-stage journey'),el('h2','','Course roadmap'));paragraph(p,'Core lessons and selected-path lessons are available. Additional course depth is still being developed.','small muted');
-const available=[...allLessons,...((extras.paths||{})[s.track]||[])];const completed=available.filter((_,i)=>s.done.includes(i)).length;paragraph(p,completed+' of '+available.length+' available lessons completed. Personal reflections are optional.','small muted');
+const available=[...allLessons,...pathLessons(s.track)];const completed=available.filter((_,i)=>s.done.includes(i)).length;paragraph(p,completed+' of '+available.length+' available lessons completed. Personal reflections are optional.','small muted');
 const bar=el('div','bar');const fill=el('i');fill.style.width=(100*completed/Math.max(1,available.length))+'%';bar.append(fill);p.append(bar);
 stages.forEach(([name,desc],i)=>{const line=el('div','log');line.append(el('strong','',String(i+1)+'. '+name));paragraph(line,desc+(available.some(l=>(l.stage||1)===i+1)?' · lessons available':' · upcoming'),'small muted');p.append(line)});host.append(p);
 if(!s.track){const prompt=el('div','card');paragraph(prompt,'Choose a focus to open your first lesson. You can change it later without losing completed lessons.');host.append(prompt);return}
@@ -64,7 +64,7 @@ const section=el('div','card');section.append(el('div','eyebrow','Curriculum'),e
 available.forEach((lesson,i)=>{const line=el('div','log');line.append(el('strong','',lesson.title));paragraph(line,(s.done.includes(i)?'✓ Completed · ':'')+lesson.scripture,'small muted');line.append(btn('Open lesson',()=>openLesson(i),'btn secondary tiny'));section.append(line)});host.append(section);
 }
 function openLesson(i){
-const host=$('courseBody');host.replaceChildren();const available=[...allLessons,...((extras.paths||{})[s.track]||[])];const L=available[i],box=el('article','card');
+const host=$('courseBody');host.replaceChildren();const available=[...allLessons,...pathLessons(s.track)];const L=available[i],box=el('article','card');
 box.append(btn('← Back to course',render,'btn secondary tiny'),el('div','eyebrow','Stage '+(L.stage||1)+' · Lesson '+(i+1)),el('h2','',L.title));
 paragraph(box,'Scripture study: '+L.scripture+'. Read these passages in your preferred Bible translation.','notice small');
 L.teach.forEach(t=>paragraph(box,t,'muted'));
