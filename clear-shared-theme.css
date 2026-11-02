@@ -1,0 +1,30 @@
+/* CLEAR shared premium visual language · v59 */
+:root{--clear-bg:#04191d;--clear-surface:#0e3032;--clear-surface-high:#174542;--clear-gold:#e7d3a5;--clear-gold-muted:#bba06e;--clear-text:#f3f1ea;--clear-muted:#b9c8c5;--clear-line:#416763;color-scheme:dark}
+.page:not(#home){color:var(--clear-text);padding-bottom:15px}
+.page:not(#home)>.eyebrow{color:var(--clear-gold-muted);font-weight:650;letter-spacing:.145em;margin-bottom:9px}
+.page:not(#home)>.title{font-size:clamp(29px,7vw,36px);letter-spacing:-.032em;font-weight:760;margin-bottom:12px}
+.page:not(#home)>.muted{color:var(--clear-muted);line-height:1.55;margin-bottom:18px}
+.page:not(#home) .card{background:linear-gradient(148deg,#17413f 0%,#0c2b2e 55%,#082326 100%);border:1px solid rgba(207,179,121,.37);border-radius:21px;padding:21px;box-shadow:0 13px 27px #00111475,inset 0 1px #d2e5d21c}
+.page:not(#home) .card .eyebrow{color:#e0c58f;letter-spacing:.13em;font-weight:650}
+.page:not(#home) h2,.page:not(#home) h3{color:#f3f1ea;letter-spacing:-.022em;line-height:1.22}
+.page:not(#home) .muted{color:#bdcbc7;line-height:1.55}
+.page:not(#home) .btn:not(.danger){background:linear-gradient(175deg,#ead39c,#d5b06f);border:1px solid #f0dca8;border-radius:16px;color:#102726;box-shadow:inset 0 1px #fff5d9a8,0 6px 16px #00111483;font-weight:700}
+.page:not(#home) .btn.secondary,.page:not(#home) a.btn.secondary{background:linear-gradient(165deg,#1b514e,#0c3034);border:1px solid #638c83;color:#f4efdf;box-shadow:inset 0 1px #e1f8ed26,0 6px 15px #00111477}
+.page:not(#home) .tile{background:linear-gradient(155deg,#1a4a48,#0b3032);border:1px solid #4d807a;border-radius:17px;box-shadow:0 6px 16px #0016195c,inset 0 1px #ffffff20;color:#eff3ed;line-height:1.32}
+.page:not(#home) .tile span{color:#e8d29d}
+.page:not(#home) .input,.page:not(#home) input:not([type=checkbox]):not([type=radio]),.page:not(#home) textarea,.page:not(#home) select{background:#09272b;border:1px solid #4b7771;border-radius:13px;color:#f4f2ec;min-height:45px;box-shadow:inset 0 2px 7px #0011154f}
+.page:not(#home) input:focus-visible,.page:not(#home) select:focus-visible,.page:not(#home) textarea:focus-visible{outline:2px solid #e7d3a5;outline-offset:2px;border-color:#d7bd83}
+.page:not(#home) label{color:#e5eae4}
+.page:not(#home) .notice{background:#12393a;border-left-color:#d2b476;color:#dfebe4}
+.page:not(#home) .pill{background:#153a3a;border:1px solid #537d75;color:#e6eee8}
+.page:not(#home) .pill.selected{background:#d9bc80;border-color:#efdba6;color:#102625;box-shadow:0 4px 12px #00141970}
+.page:not(#home) .bar{background:#102f32}.page:not(#home) .bar>i{background:linear-gradient(90deg,#8d7546,#dec78c)}
+.page:not(#home) .stat{background:#123b3c;border:1px solid #45645e}.page:not(#home) .stat b{color:#f0d39a}
+.page:not(#home) .footer-note{color:#aebfba;line-height:1.55}
+#insights .card,#support .card,#settings .card,#course .card,#dailyBible .card,#bibleLibrary .card,#scriptureFinder .card{overflow-wrap:anywhere}
+#support .breath{background:radial-gradient(circle at 35% 30%,#68d8c9,#17857d 50%,#0b4548 100%);box-shadow:0 0 30px #52d2bf36,inset 0 2px #b3eee84d}
+#support .clear-support-welcome{border-color:#c1a46c!important}
+#bibleLibrary .bible-verse{color:#f0eee7;line-height:1.8;letter-spacing:.003em}
+#scriptureFinder #finderQuestion{min-height:112px}
+@media(max-width:390px){.page:not(#home) .card{padding:17px}.page:not(#home) .tile{padding:13px}}
+@media(prefers-reduced-motion:reduce){.page:not(#home) *{animation-duration:.01ms!important;transition-duration:.01ms!important}}
