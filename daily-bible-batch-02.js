@@ -3,7 +3,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Creation is good",
     "scripture": "Genesis 1:1-31",
-    "context": "Genesis portrays creation as purposeful and good, with human beings bearing God's image.",
+    "context": "Genesis portrays creation as purposeful and good, with human beings bearing God's image. The repeated declaration that creation is good culminates in humanity's responsibility as God's image-bearers.",
     "prompt": "How might treating people as image-bearers change one interaction today?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -17,14 +17,14 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "The first broken trust",
     "scripture": "Genesis 3:1-24",
-    "context": "Human disobedience fractures relationships with God and one another, yet God's care remains visible.",
+    "context": "Human disobedience fractures relationships with God and one another, yet God's care remains visible. The consequences include broken trust, blame, and expulsion from Eden; the text does not present sin as merely a private emotion.",
     "prompt": "Where do you need honesty instead of hiding?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "A costly offering",
     "scripture": "Genesis 4:1-16",
-    "context": "Cain's anger and refusal to master sin lead to violence against his brother.",
+    "context": "Cain's anger and refusal to master sin lead to violence against his brother. God confronts Cain before the murder and holds him accountable afterward.",
     "prompt": "What anger needs attention before it harms a relationship?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -38,7 +38,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "A covenant sign",
     "scripture": "Genesis 9:8-17",
-    "context": "God's covenant with Noah includes all living creatures and uses the rainbow as its sign.",
+    "context": "God's covenant with Noah includes all living creatures and uses the rainbow as its sign. The covenant explicitly includes Noah's descendants and all living creatures.",
     "prompt": "How does remembering God's faithfulness affect your fears?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -59,7 +59,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Joseph chooses mercy",
     "scripture": "Genesis 45:1-15",
-    "context": "Joseph reveals himself to his brothers and chooses reconciliation instead of retaliation.",
+    "context": "Joseph reveals himself to his brothers and chooses reconciliation instead of retaliation. Joseph discerns God's larger purpose without calling his brothers' betrayal morally good.",
     "prompt": "What would mercy look like without ignoring what happened?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -80,7 +80,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "A path through fear",
     "scripture": "Exodus 14:10-31",
-    "context": "Israel faces danger at the sea, and God makes a way through a seemingly impossible situation.",
+    "context": "Israel faces danger at the sea, and God makes a way through a seemingly impossible situation. This is a particular account of Israel's deliverance, not a promise that every danger will immediately disappear.",
     "prompt": "How can you respond faithfully when fear feels overwhelming?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -101,7 +101,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "The call to holiness",
     "scripture": "Leviticus 19:1-18",
-    "context": "Israel's call to holiness includes fair dealing and love for neighbors.",
+    "context": "Israel's call to holiness includes fair dealing and love for neighbors. Love of neighbor appears alongside duties of honesty, fair judgment, and protection from exploitation.",
     "prompt": "How can integrity and love shape a practical decision today?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -115,21 +115,21 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Courage amid uncertainty",
     "scripture": "Numbers 13:26-33",
-    "context": "The scouts see the same land but differ in how they respond to the challenges ahead.",
+    "context": "The scouts see the same land but differ in how they respond to the challenges ahead. The report combines genuine challenges with the scouts' fearful interpretation.",
     "prompt": "What fear might be distorting your view of a real challenge?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "Choose life",
     "scripture": "Deuteronomy 30:11-20",
-    "context": "Moses urges Israel to love God and choose the path of life and obedience.",
+    "context": "Moses urges Israel to love God and choose the path of life and obedience. The choice is first addressed to Israel within its covenant with God.",
     "prompt": "What choice today best aligns with your deepest commitments?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
   {
     "title": "Strength for the next step",
     "scripture": "Joshua 1:1-9",
-    "context": "God commissions Joshua to lead with courage and remain attentive to the law.",
+    "context": "God commissions Joshua to lead with courage and remain attentive to the law. Courage is joined to attention to God's instruction rather than reckless confidence.",
     "prompt": "What responsibility requires courage and steady obedience?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -171,7 +171,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "A wise request",
     "scripture": "1 Kings 3:5-14",
-    "context": "Solomon asks God for wisdom to govern well rather than for wealth or power.",
+    "context": "Solomon asks God for wisdom to govern well rather than for wealth or power. Solomon seeks discernment specifically for the responsibility of governing people justly.",
     "prompt": "Where should you seek wisdom before acting?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -213,7 +213,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "God meets the hurting",
     "scripture": "Psalm 13:1-6",
-    "context": "The psalm moves from a painful complaint toward remembered trust.",
+    "context": "The psalm moves from a painful complaint toward remembered trust. The movement toward trust does not erase the psalmist's earlier grief.",
     "prompt": "What fear or sorrow could you bring honestly into prayer?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -255,7 +255,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Trust beyond your view",
     "scripture": "Proverbs 3:1-12",
-    "context": "The proverb commends trust in God and warns against relying only on one's own understanding.",
+    "context": "The proverb commends trust in God and warns against relying only on one's own understanding. Trust and humility are commended, not the abandonment of thoughtful planning.",
     "prompt": "What assumption should you hold more humbly?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -290,7 +290,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Renewed strength",
     "scripture": "Isaiah 40:27-31",
-    "context": "Isaiah assures weary people that the everlasting God does not grow tired.",
+    "context": "Isaiah assures weary people that the everlasting God does not grow tired. These words address discouraged people who believe their plight has escaped God's notice.",
     "prompt": "Where do you need patient endurance rather than immediate results?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -332,7 +332,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Prayer in uncertainty",
     "scripture": "Daniel 6:10-23",
-    "context": "Daniel continues his established practice of prayer despite serious threats.",
+    "context": "Daniel continues his established practice of prayer despite serious threats. The extraordinary rescue described is not a guarantee of the same outcome in every danger.",
     "prompt": "What practice would help keep you grounded under pressure?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
@@ -346,7 +346,7 @@ window.CLEAR_DAILY_BATCH_02=[
   {
     "title": "Let justice flow",
     "scripture": "Amos 5:18-24",
-    "context": "Amos condemns worship that coexists with injustice and calls for righteousness.",
+    "context": "Amos condemns worship that coexists with injustice and calls for righteousness. The prophet opposes worship practices that coexist with injustice.",
     "prompt": "How can your choices better match the values you profess?",
     "prayer": "Lord Jesus, help me understand this passage with care and put its teaching into practice with humility, wisdom, and love. Amen."
   },
