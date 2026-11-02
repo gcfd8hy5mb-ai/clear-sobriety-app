@@ -35,6 +35,11 @@ const p=(text)=>{const node=document.createElement('p');node.className='small mu
 p(rows.length+' voluntary check-ins recorded for '+names[path]+'.');
 if(recent.length>=3){p('In the last '+recent.length+' check-ins, '+recent.filter(e=>e.feeling===3).length+' were marked as difficult moments.'+(common?' Most frequently selected factor: '+common[0]+'.':''));}else p('A pattern summary needs at least three check-ins for this focus. No predictions are made.');
 const [verse,interpretation,exercise]=guidance[path];const heading=document.createElement('h3');heading.textContent='Scripture to explore: '+verse;info.append(heading);p(interpretation);p('Optional exercise: '+exercise);p('This is an educational suggestion, not a personalized message from God or a medical assessment. Read the passage in context.');
+if(path!=='general'){
+ const lesson=document.createElement('button');lesson.type='button';lesson.className='btn secondary';lesson.style.marginTop='12px';lesson.textContent='Open '+names[path]+' biblical lesson';
+ lesson.onclick=()=>window.dispatchEvent(new CustomEvent('clear:open-path-lesson',{detail:{focus:path,stage:1}}));
+ info.append(lesson);
+}
 }
 field.onchange=show;show();
 }
