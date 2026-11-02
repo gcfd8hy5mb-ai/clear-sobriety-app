@@ -1,0 +1,22 @@
+name: Audit Daily Scripture
+on:
+  push:
+    paths:
+      - 'daily-*.js'
+      - 'christian-step-study.js'
+      - 'bible-data/**'
+      - 'bible-library.js'
+      - 'scripts/audit-daily-scripture.cjs'
+      - '.github/workflows/audit-daily-scripture.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate 365 daily readings and Scripture references
+        run: node scripts/audit-daily-scripture.cjs
