@@ -5,10 +5,12 @@ URL="https://ebible.org/Scriptures/engwebp_usfm.zip"
 ROOT=pathlib.Path(__file__).resolve().parents[1]/"bible-data"
 CODES="GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZK DAN HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL MAT MRK LUK JHN ACT ROM 1CO 2CO GAL EPH PHP COL 1TH 2TH 1TI 2TI TIT PHM HEB JAS 1PE 2PE 1JN 2JN 3JN JUD REV".split()
 def clean(s):
- s=re.sub(r'\\(?:f|x)\\+.*?\\(?:f|x)\\*','',s)
- s=re.sub(r'\\(?:w|\+w)\s+([^|\\]+)(?:\|[^\\]+)?\\(?:w|\+w)\\*',r'\1',s)
- s=re.sub(r'\\[+a-zA-Z0-9*]+(?:\s+)?',' ',s)
- return re.sub(r'\s+',' ',s).strip()
+ # Remove USFM footnotes, cross references, word attributes and remaining markup.
+ s=re.sub(r'\\\\[fx]\\s+.*?\\\\[fx]\\*', ' ', s, flags=re.S)
+ s=re.sub(r'\\\\(?:\\+?w)\\s+([^|\\\\]+)(?:\\|[^\\\\]+)?\\\\(?:\\+?w)\\*', r'\\1', s)
+ s=re.sub(r'\\\\[+a-zA-Z0-9]+\\*?', ' ', s)
+ s=re.sub(r'(?<=\\w)\\*(?=\\W|$)', '', s)
+ return re.sub(r'\\s+',' ',s).strip()
 request=urllib.request.Request(URL,headers={'User-Agent':'CLEAR-Bible-Importer/1.0'})
 with urllib.request.urlopen(request,timeout=90) as response: payload=response.read()
 if len(payload)<1000000:sys.exit('Downloaded source unexpectedly small; refusing incomplete import')
