@@ -1,5 +1,5 @@
 (()=>{'use strict';
-const KEY='clear-setback-plan-v1';
+const KEY='clear-relapse-plan-v1';
 const el=id=>document.getElementById(id);
 const CHECK_KEY='clear-v1';
 function latestCheck(){try{const rows=JSON.parse(localStorage.getItem(CHECK_KEY)||'{}').entries||[];return rows.filter(x=>x&&x.time&&!Number.isNaN(Date.parse(x.time))).sort((a,b)=>Date.parse(b.time)-Date.parse(a.time))[0]||null}catch{return null}}
