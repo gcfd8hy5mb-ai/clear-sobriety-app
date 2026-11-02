@@ -6,13 +6,13 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]/"bible-data"
 CODES="GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZK DAN HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL MAT MRK LUK JHN ACT ROM 1CO 2CO GAL EPH PHP COL 1TH 2TH 1TI 2TI TIT PHM HEB JAS 1PE 2PE 1JN 2JN 3JN JUD REV".split()
 def clean(s):
  s=re.sub(r'\\(?:f|x)\\+.*?\\(?:f|x)\\*','',s)
- s=re.sub(r'\\(?:w|\+w)\s+([^|\\]+)(?:\|[^\\]+)?\\(?:w|+w)\\*',r'\1',s)
+ s=re.sub(r'\\(?:w|\+w)\s+([^|\\]+)(?:\|[^\\]+)?\\(?:w|\+w)\\*',r'\1',s)
  s=re.sub(r'\\[+a-zA-Z0-9*]+(?:\s+)?',' ',s)
  return re.sub(r'\s+',' ',s).strip()
 with urllib.request.urlopen(URL,timeout=90) as response: payload=response.read()
 z=zipfile.ZipFile(io.BytesIO(payload));found={}
 for name in z.namelist():
- if not name.lower().endswith('.usfm'):continue
+ if not name.lower().endswith(('.usfm','.sfm')):continue
  raw=z.read(name).decode('utf-8-sig',errors='replace')
  match=re.search(r'(?m)^\\id\s+([A-Za-z0-9]+)',raw)
  if not match:continue
