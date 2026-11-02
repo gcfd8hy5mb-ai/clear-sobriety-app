@@ -37,7 +37,7 @@ if(recent.length>=3){p('In the last '+recent.length+' check-ins, '+recent.filter
 const [verse,interpretation,exercise]=guidance[path];const heading=document.createElement('h3');heading.textContent='Scripture to explore: '+verse;info.append(heading);p(interpretation);p('Optional exercise: '+exercise);p('This is an educational suggestion, not a personalized message from God or a medical assessment. Read the passage in context.');
 if(path!=='general'){
  const lesson=document.createElement('button');lesson.type='button';lesson.className='btn secondary';lesson.style.marginTop='12px';lesson.textContent='Open '+names[path]+' biblical lesson';
- lesson.onclick=()=>window.dispatchEvent(new CustomEvent('clear:open-path-lesson',{detail:{focus:path,stage:1}}));
+ lesson.onclick=()=>window.dispatchEvent(new CustomEvent('clear:open-path-lesson',{detail:{focus:path,stage:window.CLEAR_nextStage?.(path)||1}}));
  info.append(lesson);
 }
 }
