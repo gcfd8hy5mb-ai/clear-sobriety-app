@@ -27,7 +27,9 @@ for(let i=0;i<all.length;i++){
  if(!chapter){errors.push(id+': missing chapter');continue}
  const from=+start,to=end?+end:from;
  if(to<from||to>200||from<1){errors.push(id+': invalid verse range');continue}
- for(let v=from;v<=to;v++)if(!chapter[String(v)])errors.push(id+': missing verse '+v);
+ // The WEB Protestant edition omits Acts 8:37 (a textual variant), while retaining verse numbering.
+ const documentedOmissions=new Set(['ACT:8:37']);
+ for(let v=from;v<=to;v++)if(!chapter[String(v)]&&!documentedOmissions.has(bookId+':'+ch+':'+v))errors.push(id+': missing verse '+v);
 }
 if(all.length!==365)errors.push('Expected 365 distinct daily readings, found '+all.length);
 // Verify that the website and offline cache load the same study modules in dependency order.
