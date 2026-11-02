@@ -31,11 +31,15 @@ for(let i=0;i<all.length;i++){
 }
 if(all.length!==365)errors.push('Expected 365 distinct daily readings, found '+all.length);
 const sample=new Date(2027,0,1,12);
+const yearReadings=new Set();
 for(let day=0;day<365;day++){
  const date=new Date(sample.getFullYear(),sample.getMonth(),sample.getDate()+day,12);
  const a=context.window.CLEAR_DailyScripture.today(date);
  const b=context.window.CLEAR_DailyScripture.today(new Date(date.getFullYear(),date.getMonth(),date.getDate(),20));
  if(!a||a.scripture!==b?.scripture)errors.push('Unstable daily reading for '+date.toDateString());
+ if(a&&yearReadings.has(a.scripture))errors.push('Repeated reading within 365-day cycle: '+a.scripture);
+ if(a)yearReadings.add(a.scripture);
 }
-console.log('Audited '+all.length+' distinct readings against '+cache.size+' Bible data books; '+errors.length+' issues.');
+if(yearReadings.size!==365)errors.push('365-day cycle produced '+yearReadings.size+' distinct readings');
+console.log('Audited '+all.length+' distinct readings against '+cache.size+' Bible data books and a full 365-day calendar cycle; '+errors.length+' issues.');
 if(errors.length){for(const e of errors)console.error(e);process.exitCode=1}
