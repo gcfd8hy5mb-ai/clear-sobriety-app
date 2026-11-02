@@ -15,8 +15,8 @@ const chapter=make('input',undefined,'input');chapter.type='number';chapter.min=
 const action=make('button','Open in official WEB reader','btn');action.type='button';
 const link=make('a','Official World English Bible','small');link.href='https://ebible.org/engwebp/';link.target='_blank';link.rel='noopener noreferrer';
 const explanation=make('p','Select a book and chapter. While the Bible text import is pending, links open the verified public-domain Bible site.','footer-note');
-function refresh(){const i=Number(select.value),n=Number(chapter.value);const good=Number.isInteger(n)&&n>=1&&n<=150&&Number.isInteger(i)&&i>=0&&i<66;action.disabled=!good;explanation.textContent=good?'Selected: '+books[i]+' '+n+'. External Bible reader opens at the book; select the chapter there.':'Choose a valid chapter number.'}
-action.onclick=()=>{if(action.disabled)return;window.open('https://ebible.org/engwebp/'+bookIds[Number(select.value)]+'.htm','_blank','noopener,noreferrer')};
+function refresh(){const i=Number(select.value),n=Number(chapter.value);const good=Number.isInteger(n)&&n>=1&&n<=150&&Number.isInteger(i)&&i>=0&&i<66;action.disabled=!good;explanation.textContent=good?'Selected: '+books[i]+' '+n+'. External Bible reader opens at the translation homepage; select the book and chapter there.':'Choose a valid chapter number.'}
+action.onclick=()=>{if(action.disabled)return;window.open('https://ebible.org/engwebp/','_blank','noopener,noreferrer')};
 select.onchange=refresh;chapter.oninput=refresh;chooser.append(action,explanation,link);page.append(chooser);app.append(page);refresh();
 const tab=make('button');tab.type='button';tab.innerHTML='<strong>▤</strong>Library';tab.dataset.tab='bibleLibrary';nav.append(tab);nav.style.gridTemplateColumns='repeat(7,minmax(0,1fr))';
 tab.onclick=()=>{document.querySelectorAll('.page').forEach(p=>p.classList.toggle('hide',p!==page));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b===tab));window.scrollTo(0,0)};
