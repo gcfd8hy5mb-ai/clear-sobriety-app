@@ -10,7 +10,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "God provides",
     "scripture": "Genesis 22:1-19",
-    "context": "Abraham faces a severe test and God provides a substitute, a passage requiring careful reading and humility.",
+    "context": "God tests Abraham with a command to offer Isaac, but stops the act and provides a ram. The difficult narrative emphasizes trust and God's provision, not permission for human sacrifice.",
     "prompt": "How can you seek God's character and provision when a story is difficult?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -94,7 +94,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "The year of release",
     "scripture": "Leviticus 25:8-17",
-    "context": "Jubilee laws place economic relationships under God's ownership and concern for fairness.",
+    "context": "Israel's Jubilee legislation calls for land to return to family holdings and regulates prices in relation to years until Jubilee, limiting permanent loss of inherited land.",
     "prompt": "How should compassion shape your view of financial power?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
