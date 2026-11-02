@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const title=document.createElement('h2');const line=document.createElement('p');line.className='muted small';
   if(studies.length){const date=new Date(),day=Math.floor(new Date(date.getFullYear(),date.getMonth(),date.getDate()).getTime()/86400000);const lesson=studies[((day%studies.length)+studies.length)%studies.length];title.textContent=lesson.title;line.textContent=lesson.scripture+' · '+lesson.context}
   else{title.textContent='Begin with Scripture';line.textContent='Explore the daily Bible reading and reflection.'}
-  card.append(eye,title,line);mainIntro.after(card);
+  card.append(eye,title,line);mainIntro.before(card);
  }
  const tiles=home?.querySelector('.grid');if(tiles)tiles.style.display='none';
  const buttons=[...home.querySelectorAll('button[data-tab="support"]')];buttons.forEach(b=>b.style.display='none');
