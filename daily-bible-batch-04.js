@@ -3,14 +3,14 @@ window.CLEAR_DAILY_BATCH_04=[
   {
     "scripture": "Genesis 5:21-24",
     "title": "Walking with God",
-    "context": "Enoch's brief account emphasizes a life described by walking with God.",
+    "context": "Enoch's brief account emphasizes a life described by walking with God. The account offers few details about Enoch; its emphasis is on his walking with God, not speculation about his daily life.",
     "prompt": "What daily habit could deepen your attentiveness to God?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
   {
     "scripture": "Genesis 8:1-22",
     "title": "A world renewed",
-    "context": "After the flood, Noah leaves the ark and responds with worship.",
+    "context": "After the flood, Noah leaves the ark and responds with worship. God's remembrance leads to receding waters and Noah's worship, but the flood's losses remain part of the narrative.",
     "prompt": "How can gratitude mark a fresh beginning?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
@@ -24,7 +24,7 @@ window.CLEAR_DAILY_BATCH_04=[
   {
     "scripture": "Genesis 13:1-18",
     "title": "Choosing peace",
-    "context": "Abram gives Lot first choice of land to prevent conflict.",
+    "context": "Abram gives Lot first choice of land to prevent conflict. Abram's choice gives Lot room to select land while prioritizing peace between their households.",
     "prompt": "Where can generosity resolve unnecessary competition?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
@@ -38,21 +38,21 @@ window.CLEAR_DAILY_BATCH_04=[
   {
     "scripture": "Genesis 21:1-21",
     "title": "God hears the overlooked",
-    "context": "God provides for Hagar and Ishmael in the wilderness.",
+    "context": "God provides for Hagar and Ishmael in the wilderness. Hagar's distress is heard, water is provided, and God promises a future for Ishmael.",
     "prompt": "Whose needs are too easily overlooked?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
   {
     "scripture": "Genesis 26:12-25",
     "title": "Wells of peace",
-    "context": "Isaac keeps moving rather than escalating disputes over water.",
+    "context": "Isaac keeps moving rather than escalating disputes over water. Isaac's movement between disputed wells shows restraint without denying that real conflict occurred.",
     "prompt": "Where might restraint preserve peace?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
   {
     "scripture": "Genesis 37:1-11",
     "title": "Jealousy in families",
-    "context": "Joseph's dreams intensify conflict already growing among his brothers.",
+    "context": "Joseph's dreams intensify conflict already growing among his brothers. Family favoritism and Joseph's reports contribute to resentment before the brothers later act against him.",
     "prompt": "How can you resist resentment over another's opportunities?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
@@ -73,35 +73,35 @@ window.CLEAR_DAILY_BATCH_04=[
   {
     "scripture": "Exodus 4:10-17",
     "title": "Help for weakness",
-    "context": "Moses describes his limitations and receives support for his mission.",
+    "context": "Moses describes his limitations and receives support for his mission. God responds to Moses' concerns about speech by appointing Aaron to speak with him, without removing Moses' responsibility.",
     "prompt": "What help could make a difficult task possible?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
   {
     "scripture": "Exodus 17:8-16",
     "title": "Shared strength",
-    "context": "Aaron and Hur support Moses during Israel's struggle.",
+    "context": "Aaron and Hur support Moses during Israel's struggle. The scene includes Joshua's leadership in battle as well as Aaron and Hur supporting Moses; it is an ancient conflict, not an instruction to fight today.",
     "prompt": "Who can support you, and whom can you support?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
   {
     "scripture": "Exodus 23:1-9",
     "title": "Honest justice",
-    "context": "Israel is warned against false reports, favoritism, and exploiting strangers.",
+    "context": "Israel is warned against false reports, favoritism, and exploiting strangers. The laws oppose false testimony, favoritism toward rich or poor, bribery, and the oppression of foreigners.",
     "prompt": "How can fairness guide an uncomfortable decision?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
   {
     "scripture": "Exodus 33:12-23",
     "title": "Seeking God's presence",
-    "context": "Moses asks for God's presence rather than settling for success alone.",
+    "context": "Moses asks for God's presence rather than settling for success alone. Moses seeks assurance of God's presence after Israel's serious covenant failure with the golden calf.",
     "prompt": "What matters more than accomplishing your plans?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
   {
     "scripture": "Leviticus 16:1-22",
     "title": "Atonement and mercy",
-    "context": "The Day of Atonement rituals address Israel's need for cleansing before God.",
+    "context": "The Day of Atonement rituals address Israel's need for cleansing before God. The rituals depict purification and removal of wrongdoing on the Day of Atonement; they belong to Israel's priestly worship.",
     "prompt": "How does taking wrong seriously change your understanding of mercy?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
@@ -115,7 +115,7 @@ window.CLEAR_DAILY_BATCH_04=[
   {
     "scripture": "Numbers 11:10-17",
     "title": "Leadership needs support",
-    "context": "Moses names his exhaustion and receives shared leadership.",
+    "context": "Moses names his exhaustion and receives shared leadership. Moses admits he cannot bear the burden alone, and seventy elders are appointed to share responsibility.",
     "prompt": "What responsibility should you stop carrying alone?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
@@ -129,14 +129,14 @@ window.CLEAR_DAILY_BATCH_04=[
   {
     "scripture": "Numbers 27:12-23",
     "title": "Preparing a successor",
-    "context": "Moses asks God to appoint a leader for the community after him.",
+    "context": "Moses asks God to appoint a leader for the community after him. Joshua is commissioned publicly so the people will not be left without a shepherd.",
     "prompt": "Who are you preparing to succeed you?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
   {
     "scripture": "Deuteronomy 4:5-9",
     "title": "Do not forget",
-    "context": "Moses urges Israel to remember and teach the words they have received.",
+    "context": "Moses urges Israel to remember and teach the words they have received. Remembering also means teaching children and preserving knowledge across generations.",
     "prompt": "What important lesson should you pass along?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
@@ -150,7 +150,7 @@ window.CLEAR_DAILY_BATCH_04=[
   {
     "scripture": "Deuteronomy 15:7-11",
     "title": "Openhanded generosity",
-    "context": "The law calls people not to harden their hearts toward neighbors in need.",
+    "context": "The law calls people not to harden their hearts toward neighbors in need. The law commands openhanded support for the poor while warning against calculating away generosity.",
     "prompt": "Where can generosity become concrete?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
@@ -206,14 +206,14 @@ window.CLEAR_DAILY_BATCH_04=[
   {
     "scripture": "Ruth 4:13-22",
     "title": "Hope across generations",
-    "context": "Ruth's story closes with family restoration and a place in David's ancestry.",
+    "context": "Ruth's story closes with family restoration and a place in David's ancestry. The genealogy connects Ruth and Boaz's family to David, placing personal faithfulness inside Israel's larger history.",
     "prompt": "What faithful ordinary act may matter beyond today?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
   {
     "scripture": "1 Samuel 1:9-20",
     "title": "A vulnerable prayer",
-    "context": "Hannah brings deep grief to God and later gives thanks.",
+    "context": "Hannah brings deep grief to God and later gives thanks. Hannah's story includes both her distressed prayer and her later response of gratitude, without making children a measure of anyone's worth.",
     "prompt": "What longing do you need to express honestly?",
     "prayer": "Lord God, help me understand Your Word faithfully and respond with courage, humility, and love. In Jesus' name, amen."
   },
