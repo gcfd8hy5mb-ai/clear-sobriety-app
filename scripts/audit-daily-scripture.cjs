@@ -18,7 +18,7 @@ for(let i=0;i<all.length;i++){
  const item=all[i],id='reading '+(i+1)+' ('+(item.scripture||'missing reference')+')';
  for(const k of ['title','scripture','context','prompt','prayer'])if(typeof item[k]!=='string'||!item[k].trim())errors.push(id+': missing '+k);
  if(seen.has(item.scripture))errors.push(id+': duplicate reference');seen.add(item.scripture);
- const match=/^((?:[1-3] )?[A-Za-z ]+) (\\d+):(\\d+)(?:-(\\d+))?$/.exec(item.scripture||'');
+ const match=/^((?:[1-3] )?[A-Za-z ]+) (\d+):(\d+)(?:-(\d+))?$/.exec(item.scripture||'');
  if(!match){errors.push(id+': invalid reference format');continue}
  const [,book,ch,start,end]=match,bookId=lookup.get(book);
  if(!bookId){errors.push(id+': unknown Bible book');continue}
