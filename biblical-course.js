@@ -39,7 +39,25 @@ prompt:'What one realistic step can you take in the next 24 hours, and who could
 ]; const extras=window.CLEAR_RECOVERY_CONTENT||{core:[],paths:{}}; const more=window.CLEAR_RECOVERY_CONTENT_V2||{core:[],paths:{}};const allLessons=[...lessons,...(extras.core||[]),...(more.core||[])].map(x=>({...x,stage:x.stage||1}));const pathLessons=t=>[...((extras.paths||{})[t]||[]),...((more.paths||{})[t]||[])];
 const $=id=>document.getElementById(id);
 const safeLoad=()=>{try{const x=JSON.parse(localStorage.getItem(KEY)||'{}');return x&&typeof x==='object'?x:{}}catch{return {}}};
-let s={track:'',done:[],responses:{},...safeLoad()};if(!Array.isArray(s.done))s.done=[];if(!s.responses||typeof s.responses!=='object')s.responses={};
+let s={track:'',tracks:[],done:[],responses:{},...safeLoad()};
+if(!Array.isArray(s.done))s.done=[];
+if(!s.responses||typeof s.responses!=='object')s.responses={};
+if(!Array.isArray(s.tracks))s.tracks=[];
+if(!s.tracks.length && s.track)s.tracks=[s.track];
+s.tracks=[...new Set(s.tracks.filter(t=>tracks.some(x=>x[0]===t)))];
+const lessonId=(l,t='core')=>t+':'+(l.stage||1)+':'+l.title.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+const availableLessons=()=>[...allLessons.map(l=>({...l,id:lessonId(l)})),...s.tracks.flatMap(t=>pathLessons(t).map(l=>({...l,id:lessonId(l,t),track:t})))];
+/* Migrate index-based progress from earlier versions, when only one track was selectable. */
+if(!s.migratedIds){
+ const old=[...allLessons,...pathLessons(s.track)];
+ s.done=s.done.map(v=>typeof v==='number' && old[v]?lessonId(old[v],v<allLessons.length?'core':s.track):v);
+ const responses={};
+ for(const [key,value] of Object.entries(s.responses)){
+   const i=Number(key),valid=Number.isInteger(i)&&String(i)===key&&old[i];
+   responses[valid?lessonId(old[i],i<allLessons.length?'core':s.track):key]=value;
+ }
+ s.responses=responses;s.migratedIds=true;
+}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(s))}catch{status('Storage unavailable: progress cannot be saved on this device.')}}
 function el(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x}
 function status(t){const x=$('courseStatus');if(x)x.textContent=t}
@@ -49,32 +67,38 @@ function render(){
 const host=$('courseBody');if(!host)return;host.replaceChildren();
 const intro=el('div','card');intro.append(el('div','eyebrow','Private learning path'),el('h2','', 'Choose a recovery focus'));
 paragraph(intro,'The same biblical foundation is available to everyone. Examples and reflections can focus on your own circumstances. This is not a diagnosis.','small muted');
-const select=el('select','input');select.setAttribute('aria-label','Recovery focus');
-[['','Choose a learning path'],...tracks].forEach(([value,label])=>{const o=el('option','',label);o.value=value;select.append(o)});select.value=s.track;select.onchange=()=>{s.track=select.value;save();render()};intro.append(select);
-if(s.track==='codependency'||s.track==='family'){paragraph(intro,'Codependency is a descriptive term, not a clinical diagnosis. Caring for someone does not make you responsible for their choices. Forgiveness never requires remaining in danger.','notice small')}
-if(s.track==='alcohol'||s.track==='substances'){paragraph(intro,'Important: stopping alcohol or some sedatives suddenly can cause dangerous withdrawal. Seek medical guidance before abrupt cessation if withdrawal is possible. Opioid-use treatment and overdose-prevention care are also available.','notice warning small')}
-if(s.track==='eating'){paragraph(intro,'Eating-related difficulties may require specialized clinical support. CLEAR does not recommend restriction, fasting, purging or weight targets.','notice warning small')}
+const choices=el('div','');choices.style.display='grid';choices.style.gridTemplateColumns='repeat(2,minmax(0,1fr))';choices.style.gap='9px';
+tracks.forEach(([value,label])=>{
+ const wrap=el('label','small');wrap.style.display='flex';wrap.style.gap='8px';wrap.style.alignItems='center';wrap.style.margin='0';wrap.style.padding='10px';wrap.style.border='1px solid #31565a';wrap.style.borderRadius='10px';
+ const input=el('input');input.type='checkbox';input.checked=s.tracks.includes(value);input.style.accentColor='#35cdb8';
+ input.onchange=()=>{s.tracks=input.checked?[...s.tracks,value]:s.tracks.filter(x=>x!==value);s.track=s.tracks[0]||'';save();render()};
+ wrap.append(input,el('span','',label));choices.append(wrap);
+});intro.append(choices);
+paragraph(intro,'Select multiple areas if needed. Progress is shared for foundational lessons and independent for each recovery path.','small muted');
+if(s.tracks.includes('codependency')||s.tracks.includes('family'))paragraph(intro,'Caring for someone does not make you responsible for their decisions. Forgiveness never requires remaining in danger.','notice small');
+if(s.tracks.includes('alcohol')||s.tracks.includes('substances'))paragraph(intro,'Stopping alcohol or sedatives abruptly can be dangerous. Seek medical guidance about withdrawal. Other substance-related risks may require professional care.','notice warning small');
+if(s.tracks.includes('eating'))paragraph(intro,'Eating-related difficulties may require specialist care; CLEAR is not a treatment or diet plan.','notice warning small');
 host.append(intro);
 const p=el('div','card');p.append(el('div','eyebrow','12-stage journey'),el('h2','','Course roadmap'));paragraph(p,'Core lessons and selected-path lessons are available. Additional course depth is still being developed.','small muted');
-const available=[...allLessons,...pathLessons(s.track)];const completed=available.filter((_,i)=>s.done.includes(i)).length;paragraph(p,completed+' of '+available.length+' available lessons completed. Personal reflections are optional.','small muted');
+const available=availableLessons();const completed=available.filter(l=>s.done.includes(l.id)).length;paragraph(p,completed+' of '+available.length+' available lessons completed. Personal reflections are optional.','small muted');
 const bar=el('div','bar');const fill=el('i');fill.style.width=(100*completed/Math.max(1,available.length))+'%';bar.append(fill);p.append(bar);
 stages.forEach(([name,desc],i)=>{const line=el('div','log');line.append(el('strong','',String(i+1)+'. '+name));paragraph(line,desc+(available.some(l=>(l.stage||1)===i+1)?' · lessons available':' · upcoming'),'small muted');p.append(line)});host.append(p);
-if(!s.track){const prompt=el('div','card');paragraph(prompt,'Choose a focus to open your first lesson. You can change it later without losing completed lessons.');host.append(prompt);return}
+if(!s.tracks.length){const prompt=el('div','card');paragraph(prompt,'Choose a focus to open your first lesson. You can change it later without losing completed lessons.');host.append(prompt);return}
 const section=el('div','card');section.append(el('div','eyebrow','Curriculum'),el('h2','','Your lessons'));
-available.forEach((lesson,i)=>{const line=el('div','log');line.append(el('strong','',lesson.title));paragraph(line,(s.done.includes(i)?'✓ Completed · ':'')+lesson.scripture,'small muted');line.append(btn('Open lesson',()=>openLesson(i),'btn secondary tiny'));section.append(line)});host.append(section);
+available.forEach((lesson,i)=>{const line=el('div','log');line.append(el('strong','',lesson.title));paragraph(line,(s.done.includes(lesson.id)?'✓ Completed · ':')+lesson.scripture,'small muted');line.append(btn('Open lesson',()=>openLesson(i),'btn secondary tiny'));section.append(line)});host.append(section);
 }
 function openLesson(i){
-const host=$('courseBody');host.replaceChildren();const available=[...allLessons,...pathLessons(s.track)];const L=available[i],box=el('article','card');
+const host=$('courseBody');host.replaceChildren();const available=availableLessons();const L=available[i],box=el('article','card');
 box.append(btn('← Back to course',render,'btn secondary tiny'),el('div','eyebrow','Stage '+(L.stage||1)+' · Lesson '+(i+1)),el('h2','',L.title));
 paragraph(box,'Scripture study: '+L.scripture+'. Read these passages in your preferred Bible translation.','notice small');
 L.teach.forEach(t=>paragraph(box,t,'muted'));
 box.append(el('h2','','Personal reflection'));paragraph(box,L.prompt,'small muted');
-const ta=el('textarea','input');ta.rows=5;ta.placeholder='Optional private reflection (stored in this browser only)';ta.value=s.responses[i]||'';ta.style.width='100%';box.append(ta);
-box.append(btn('Save reflection',()=>{s.responses[i]=ta.value.slice(0,3000);save();status('Reflection saved on this device.')},'btn secondary'));
+const ta=el('textarea','input');ta.rows=5;ta.placeholder='Optional private reflection (stored in this browser only)';ta.value=s.responses[L.id]||'';ta.style.width='100%';box.append(ta);
+box.append(btn('Save reflection',()=>{s.responses[L.id]=ta.value.slice(0,3000);save();status('Reflection saved on this device.')},'btn secondary'));
 box.append(el('h2','','Knowledge check'));paragraph(box,L.check.q);
 const answers=el('div','');answers.style.display='grid';answers.style.gap='8px';
 L.check.a.forEach((t,n)=>answers.append(btn(t,()=>{const correct=n===L.check.correct;status((correct?'Correct. ':'Try again. ')+L.check.why)},'btn secondary')));box.append(answers);
-box.append(btn(s.done.includes(i)?'Lesson completed ✓':'Mark lesson complete',()=>{if(!s.done.includes(i))s.done.push(i);save();render();status('Lesson marked complete. You can revisit it anytime.')}));host.append(box);
+box.append(btn(s.done.includes(L.id)?'Lesson completed ✓':'Mark lesson complete',()=>{if(!s.done.includes(L.id))s.done.push(L.id);save();render();status('Lesson marked complete. You can revisit it anytime.')}));host.append(box);
 }
 function init(){
 const home=$('home'),nav=document.querySelector('.nav-inner'),app=document.querySelector('main.app');if(!home||!nav||!app)return;
