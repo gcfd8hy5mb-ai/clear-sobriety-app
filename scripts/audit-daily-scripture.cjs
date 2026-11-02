@@ -30,6 +30,25 @@ for(let i=0;i<all.length;i++){
  for(let v=from;v<=to;v++)if(!chapter[String(v)])errors.push(id+': missing verse '+v);
 }
 if(all.length!==365)errors.push('Expected 365 distinct daily readings, found '+all.length);
+// Verify that the website and offline cache load the same study modules in dependency order.
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const serviceWorker=fs.readFileSync(path.join(root,'sw.js'),'utf8');
+const htmlAssets=[...html.matchAll(/<script[^>]*src="([^"]+)"[^>]*>/g)].map(m=>m[1].replace(/^\.\//,''));
+const cacheAssets=[...serviceWorker.matchAll(/'\.\/([^']+)'/g)].map(m=>m[1]);
+let previousIndex=-1;
+for(const name of source){
+ const indices=htmlAssets.map((a,i)=>a.split('?')[0]===name?i:-1).filter(i=>i>=0);
+ if(indices.length!==1){errors.push('HTML must load '+name+' exactly once');continue}
+ if(indices[0]<=previousIndex)errors.push('HTML loads daily study sources out of order: '+name);
+ previousIndex=indices[0];
+ const asset=htmlAssets[indices[0]];
+ if(!cacheAssets.includes(asset))errors.push('Offline cache missing or outdated: '+asset);
+}
+for(const name of ['biblical-course.js']){
+ const asset=htmlAssets.find(a=>a.split('?')[0]===name);
+ if(!asset||!cacheAssets.includes(asset))errors.push('Daily Bible Study module missing from HTML or offline cache: '+name);
+}
+
 const sample=new Date(2027,0,1,12);
 const yearReadings=new Set();
 for(let day=0;day<365;day++){
