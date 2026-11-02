@@ -3,7 +3,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "The promise remembered",
     "scripture": "Genesis 15:1-6",
-    "context": "God reassures Abram that his promise stands despite Abram's unanswered questions.",
+    "context": "God reassures Abram that his promise stands despite Abram's unanswered questions. The scene concerns God's promise of descendants and Abram's belief, rather than immediate fulfillment.",
     "prompt": "What promise of God's character can anchor you during uncertainty?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -38,7 +38,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Integrity under pressure",
     "scripture": "Genesis 39:1-23",
-    "context": "Joseph resists wrongdoing even when obedience leads to unjust suffering.",
+    "context": "Joseph resists wrongdoing even when obedience leads to unjust suffering. Joseph's integrity still results in imprisonment, challenging the idea that obedience guarantees quick success.",
     "prompt": "What boundary would protect integrity in a difficult situation?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -66,7 +66,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Living by covenant",
     "scripture": "Exodus 20:1-17",
-    "context": "The commandments describe obligations to God and neighbors in Israel's covenant life.",
+    "context": "The commandments describe obligations to God and neighbors in Israel's covenant life. The commands follow God's reminder of deliverance from Egypt and address life with God and neighbor.",
     "prompt": "Which command calls for more careful attention in your conduct?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -115,7 +115,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Remember the wilderness",
     "scripture": "Deuteronomy 8:1-18",
-    "context": "Israel is told to remember God's provision rather than credit prosperity solely to itself.",
+    "context": "Israel is told to remember God's provision rather than credit prosperity solely to itself. The warning particularly concerns forgetting God after receiving prosperity.",
     "prompt": "What success might be tempting you toward pride?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -143,7 +143,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Deborah leads wisely",
     "scripture": "Judges 4:4-10",
-    "context": "Deborah serves as prophet and judge while urging Barak to act on God's instruction.",
+    "context": "Deborah serves as prophet and judge while urging Barak to act on God's instruction. Deborah is already judging Israel when she summons Barak.",
     "prompt": "How can courage and collaboration work together?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -171,7 +171,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Obedience over appearance",
     "scripture": "1 Samuel 15:17-23",
-    "context": "Samuel challenges Saul's attempt to excuse disobedience with a religious offering.",
+    "context": "Samuel challenges Saul's attempt to excuse disobedience with a religious offering. Samuel rejects Saul's attempt to justify disobedience through a religious sacrifice.",
     "prompt": "Where are explanations replacing accountability?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -206,7 +206,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Courage to speak truth",
     "scripture": "1 Kings 18:17-39",
-    "context": "Elijah calls Israel to face conflicting loyalties in a public confrontation.",
+    "context": "Elijah calls Israel to face conflicting loyalties in a public confrontation. This ancient confrontation is not authorization for religious coercion or violence today.",
     "prompt": "How can conviction remain courageous without becoming cruel?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -262,7 +262,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Humility before mystery",
     "scripture": "Job 38:1-18",
-    "context": "God questions Job about creation to expose the limits of human perspective.",
+    "context": "God questions Job about creation to expose the limits of human perspective. God's questions highlight human limitations rather than accusing Job of a hidden offense.",
     "prompt": "What question might require humility rather than certainty?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -304,7 +304,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "A thirst for God",
     "scripture": "Psalm 42:1-11",
-    "context": "The poet speaks to a downcast soul and longs for renewed worship.",
+    "context": "The poet speaks to a downcast soul and longs for renewed worship. The repeated refrain acknowledges continued sorrow while directing hope toward God.",
     "prompt": "What gentle practice might support you through discouragement?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -395,7 +395,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "True fasting",
     "scripture": "Isaiah 58:1-12",
-    "context": "Isaiah links genuine worship with justice, generosity, and care for those in need.",
+    "context": "Isaiah links genuine worship with justice, generosity, and care for those in need. The passage specifies practical justice: sharing food, shelter, and clothing, and resisting oppression.",
     "prompt": "How can a spiritual practice lead to practical compassion?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -423,7 +423,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Faithfulness in exile",
     "scripture": "Jeremiah 29:4-14",
-    "context": "Exiles are told to seek their city's welfare while awaiting God's future restoration.",
+    "context": "Exiles are told to seek their city's welfare while awaiting God's future restoration. The promised restoration addresses exiles in Babylon and is not a blanket guarantee of individual prosperity.",
     "prompt": "How can you contribute meaningfully where you are now?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -570,7 +570,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Jesus weeps",
     "scripture": "John 11:28-44",
-    "context": "Jesus grieves with friends before raising Lazarus, showing compassion alongside divine power.",
+    "context": "Jesus grieves with friends before raising Lazarus, showing compassion alongside divine power. Jesus joins the mourners' grief even as the story moves toward Lazarus's restoration.",
     "prompt": "How can you be present with grief before trying to solve it?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -619,7 +619,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Good news across boundaries",
     "scripture": "Acts 10:34-48",
-    "context": "Peter recognizes that God shows no partiality as the gospel reaches Gentiles.",
+    "context": "Peter recognizes that God shows no partiality as the gospel reaches Gentiles. Peter's understanding changes through his encounter with Cornelius and the Spirit's coming upon Gentiles.",
     "prompt": "What prejudice might need to be challenged?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -633,7 +633,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Reasoning together",
     "scripture": "Acts 17:16-34",
-    "context": "Paul speaks in Athens by engaging the religious and philosophical questions of his listeners.",
+    "context": "Paul speaks in Athens by engaging the religious and philosophical questions of his listeners. Paul engages his audience's questions while calling for repentance and speaking of the resurrection.",
     "prompt": "How can you explain your convictions respectfully to someone who disagrees?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
@@ -668,7 +668,7 @@ window.CLEAR_DAILY_BATCH_03=[
   {
     "title": "Rejoice and pray",
     "scripture": "Philippians 4:4-9",
-    "context": "Paul connects prayer, gratitude, disciplined thought, and learned contentment.",
+    "context": "Paul connects prayer, gratitude, disciplined thought, and learned contentment. The counsel is spiritually formative, not a substitute for appropriate professional care.",
     "prompt": "Which thought pattern would benefit from prayer and careful attention?",
     "prayer": "God of mercy, guide my understanding of Your Word and help me respond with truth, patience, and love today. In Jesus' name, amen."
   },
