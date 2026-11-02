@@ -1,0 +1,30 @@
+name: Import public-domain Bible
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/import-webp.py
+      - .github/workflows/import-bible.yml
+permissions:
+  contents: write
+jobs:
+  import-bible:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import and validate official WEBP 66-book text
+        run: python scripts/import-webp.py
+      - name: Commit imported Bible files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bible-data
+          if ! git diff --cached --quiet; then
+            git commit -m "Import verified WEBP Bible text"
+            git push
+          fi
