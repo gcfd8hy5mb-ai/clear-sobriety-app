@@ -112,6 +112,18 @@ const dailyHomeBtn=btn('Open Daily Bible Study →',openDaily);dailyHomeBtn.styl
 const navBtn=el('button','','');navBtn.dataset.tab='course';navBtn.innerHTML='<strong>✦</strong>Course';nav.append(navBtn,dailyBtn);nav.style.gridTemplateColumns='repeat(6,1fr)';
 function activate(){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('hide',x.id!=='course'));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x===navBtn));window.scrollTo(0,0);render()}
 navBtn.onclick=activate;
+window.addEventListener('clear:open-path-lesson',event=>{
+ const focus=event.detail?.focus,stage=Number(event.detail?.stage)||1;
+ if(!tracks.some(t=>t[0]===focus))return;
+ if(!s.tracks.includes(focus)){s.tracks=[...s.tracks,focus];s.track=s.tracks[0];save()}
+ activate();
+ const options=availableLessons();
+ const index=options.findIndex(x=>x.track===focus&&x.stage===stage);
+ const backup=options.findIndex(x=>x.track===focus);
+ const selected=index>=0?index:backup;
+ if(selected>=0)openLesson(selected);else status('No specialized lesson exists yet for this focus. Explore the foundational course.');
+});
+
 document.querySelectorAll('.nav button').forEach(b=>{if(b!==navBtn&&b!==dailyBtn)b.addEventListener('click',()=>{page.classList.add('hide');biblePage.classList.add('hide');navBtn.classList.remove('active');dailyBtn.classList.remove('active')})});
 render();
 }
